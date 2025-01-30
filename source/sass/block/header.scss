@@ -1,0 +1,27 @@
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header__nav-list {
+  display: none;
+}

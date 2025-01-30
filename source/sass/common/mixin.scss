@@ -1,0 +1,15 @@
+// Миксин для подключения @font-face
+@mixin font-face($font-family, $font-weight, $font-style, $font-src) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    font-display: swap;
+    src: $font-src;
+  }
+}
+
+// Миксин для применения шрифтовых стилей
+@mixin font($font-style) {
+  font: $font-style;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru" data-validate="html">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship</title>
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="stylesheet" href="sass/style.scss">
+</head>
+
+<body class="page-body">
+  <section class="hero">
+    <h1 class="visually-hidden">Первый блок</h1>
+    <header class="hero__header header">
+      <div class="header__container container">
+        <div class="header__logo-wrapper">
+          <img class="header__logo" src="img/logo/logotype.png" alt="Логотип" width="52" height="52">
+        </div>
+        <nav class="header__nav">
+          <button class="header__menu-button" type="button">
+            <p class="header__menu-text">Меню</p>
+          </button>
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">О проекте</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Программы</a>
+              <ul class="header__nav-list-secondary">
+                <li class="header__nav-item-secondary">
+                  <a class="header__nav-link-secondary" href="#">Стажировки</a>
+                </li>
+                <li class="header__nav-item-secondary">
+                  <a class="header__nav-link-secondary" href="#">Волонтёрство</a>
+                </li>
+                <li class="header__nav-item-secondary">
+                  <a class="header__nav-link-secondary" href="#">Учёба</a>
+                </li>
+                <li class="header__nav-item-secondary">
+                  <a class="header__nav-link-secondary" href="#">Религия</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Как поехать</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Отзывы</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Новости</a>
+              <ul class="header__nav-list-secondary">
+                <li class="header__nav-item-secondary">
+                  <a class="header__nav-link-secondary" href="#">Интервью</a>
+                </li>
+                <li class="header__nav-item-secondary">
+                  <a class="header__nav-link-secondary" href="#">Путешествия</a>
+                </li>
+                <li class="header__nav-item-secondary">
+                  <a class="header__nav-link-secondary" href="#">Программы</a>
+                </li>
+                <li class="header__nav-item-secondary">
+                  <a class="header__nav-link-secondary" href="#">Карьера</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="hero__slider hero-slider container">
+      <div class="hero-slider__pagination">
+        <button class="hero-slider__pagination-button" type="button"><span class="visually-hidden">1</span></button>
+        <button class="hero-slider__pagination-button" type="button"><span class="visually-hidden">2</span></button>
+        <button class="hero-slider__pagination-button" type="button"><span class="visually-hidden">3</span></button>
+      </div>
+      <ul class="hero-slider__list">
+        <li class="hero-slider__item">
+          <div class="hero-slider__image-wrapper">
+            <picture>
+              <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-01.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-01.webp 2x">
+              <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-01.webp 2x">
+              <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-01.jpg 2x">
+              <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-01.jpg 2x">
+              <img class="hero-slider__image" src="img/hero/hero-mobile-01.jpg" width="320" height="568" alt="Девушка с книгой">
+            </picture>
+          </div>
+          <h2 class="hero-slider__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+          <p>Погрузитесь в академическую
+            программу, проходя практику
+            в разных городах, ощущая
+            настоящий студенческий стиль жизни!</p>
+          <a class="hero-slider__link" href="#">Подробнее</a>
+        </li>
+        <li class="hero-slider__item">
+          <div class="hero-slider__image-wrapper">
+            <picture>
+              <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-02.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-02.webp 2x">
+              <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-02.webp 2x">
+              <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-02.jpg 2x">
+              <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-02.jpg 2x">
+              <img class="hero-slider__image" src="img/hero/hero-mobile-02.jpg" width="320" height="568" alt="Девушка с книгой">
+            </picture>
+          </div>
+          <h2 class="hero-slider__title">Волонтёрские программы –
+            внесите свой вклад в общество</h2>
+          <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+          <a class="hero-slider__link" href="#">Подробнее</a>
+        </li>
+        <li class="hero-slider__item">
+          <div class="hero-slider__image-wrapper">
+            <picture>
+              <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-03.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-03.webp 2x">
+              <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-03.webp 2x">
+              <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-03.jpg 2x">
+              <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-03.jpg 2x">
+              <img class="hero-slider__image" src="img/hero/hero-mobile-03.jpg" width="320" height="568" alt="Девушка с книгой">
+            </picture>
+          </div>
+          <h2 class="hero-slider__title">Программы стажировок
+            в крупнейших компаниях мира</h2>
+          <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+          <a class="hero-slider__link" href="#">Подробнее</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- пример использования спрайта
+    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
+    <svg>
+      <use href="/__spritemap#sprite-user"></use>
+    </svg>
+    примеры требуемых атрибутов data-test="*"
+    <div data-test="hero">hero</div>
+    <div data-test="about">about</div>
+    <div data-test="programs">programs</div>
+    <div data-test="grant">grant</div>
+    <div data-test="news">news</div>
+    <div data-test="FAQ">FAQ</div>
+    <div data-test="reviews">reviews</div>
+    <div data-test="contacts">contacts</div>
+    <div data-test="form">form</div>
+    <div data-test="footer">footer</div> -->
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

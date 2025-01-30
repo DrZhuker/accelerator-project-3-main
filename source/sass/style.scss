@@ -1,0 +1,16 @@
+// Vendor
+// ---------------------------------
+
+@import "vendor/normalize";
+@import "common/variables";
+@import "common/mixin";
+@import "common/fonts";
+@import "common/global";
+@import "common/visually-hidden";
+
+// Блоки
+@import "block/button";
+@import "block/container";
+@import "block/hero";
+@import "block/header";
+@import "block/hero-slider";
