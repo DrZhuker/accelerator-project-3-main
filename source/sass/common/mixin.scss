@@ -8,8 +8,3 @@
     src: $font-src;
   }
 }
-
-// Миксин для применения шрифтовых стилей
-@mixin font($font-style) {
-  font: $font-style;
-}

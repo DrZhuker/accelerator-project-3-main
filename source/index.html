@@ -15,129 +15,149 @@
 </head>
 
 <body class="page-body">
-  <section class="hero">
-    <h1 class="visually-hidden">Первый блок</h1>
-    <header class="hero__header header">
+  <header class="header">
+    <div class="header__wrapper">
       <div class="header__container container">
         <div class="header__logo-wrapper">
           <img class="header__logo" src="img/logo/logotype.png" alt="Логотип" width="52" height="52">
         </div>
         <nav class="header__nav">
-          <button class="header__menu-button" type="button">
+          <button class="header__menu-button button" type="button">
             <p class="header__menu-text">Меню</p>
           </button>
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">О проекте</a>
+              <a class="header__nav-link link" href="#">О проекте</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Программы</a>
-              <ul class="header__nav-list-secondary">
+              <button class="header__nav-link header__nav-link--secondary header__nav-link--programs link" type="submit">Программы</button>
+              <ul class="header__nav-list-secondary header__nav-list-secondary--programs">
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link-secondary" href="#">Стажировки</a>
+                  <a class="header__nav-link link" href="#">Стажировки</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link-secondary" href="#">Волонтёрство</a>
+                  <a class="header__nav-link link" href="#">Волонтёрство</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link-secondary" href="#">Учёба</a>
+                  <a class="header__nav-link link" href="#">Учёба</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link-secondary" href="#">Религия</a>
+                  <a class="header__nav-link link" href="#">Религия</a>
                 </li>
               </ul>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Как поехать</a>
+              <a class="header__nav-link link" href="#">Как поехать</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Отзывы</a>
+              <a class="header__nav-link link" href="#">Отзывы</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Новости</a>
-              <ul class="header__nav-list-secondary">
+              <button class="header__nav-link header__nav-link--secondary header__nav-link--news link" type="submit">Новости</button>
+              <ul class="header__nav-list-secondary header__nav-list-secondary--news">
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link-secondary" href="#">Интервью</a>
+                  <a class="header__nav-link link" href="#">Интервью</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link-secondary" href="#">Путешествия</a>
+                  <a class="header__nav-link link" href="#">Путешествия</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link-secondary" href="#">Программы</a>
+                  <a class="header__nav-link link" href="#">Программы</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link-secondary" href="#">Карьера</a>
+                  <a class="header__nav-link link" href="#">Карьера</a>
                 </li>
               </ul>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Контакты</a>
+              <a class="header__nav-link link" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
       </div>
-    </header>
-    <div class="hero__slider hero-slider container">
-      <div class="hero-slider__pagination">
-        <button class="hero-slider__pagination-button" type="button"><span class="visually-hidden">1</span></button>
-        <button class="hero-slider__pagination-button" type="button"><span class="visually-hidden">2</span></button>
-        <button class="hero-slider__pagination-button" type="button"><span class="visually-hidden">3</span></button>
-      </div>
-      <ul class="hero-slider__list">
-        <li class="hero-slider__item">
-          <div class="hero-slider__image-wrapper">
-            <picture>
-              <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-01.webp 2x">
-              <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-01.webp 2x">
-              <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-01.webp 2x">
-              <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-01.jpg 2x">
-              <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-01.jpg 2x">
-              <img class="hero-slider__image" src="img/hero/hero-mobile-01.jpg" width="320" height="568" alt="Девушка с книгой">
-            </picture>
-          </div>
-          <h2 class="hero-slider__title">Глобальный профессиональный опыт обучения за рубежом</h2>
-          <p>Погрузитесь в академическую
-            программу, проходя практику
-            в разных городах, ощущая
-            настоящий студенческий стиль жизни!</p>
-          <a class="hero-slider__link" href="#">Подробнее</a>
-        </li>
-        <li class="hero-slider__item">
-          <div class="hero-slider__image-wrapper">
-            <picture>
-              <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-02.webp 2x">
-              <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-02.webp 2x">
-              <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-02.webp 2x">
-              <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-02.jpg 2x">
-              <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-02.jpg 2x">
-              <img class="hero-slider__image" src="img/hero/hero-mobile-02.jpg" width="320" height="568" alt="Девушка с книгой">
-            </picture>
-          </div>
-          <h2 class="hero-slider__title">Волонтёрские программы –
-            внесите свой вклад в общество</h2>
-          <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-          <a class="hero-slider__link" href="#">Подробнее</a>
-        </li>
-        <li class="hero-slider__item">
-          <div class="hero-slider__image-wrapper">
-            <picture>
-              <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-03.webp 2x">
-              <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-03.webp 2x">
-              <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-03.webp 2x">
-              <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-03.jpg 2x">
-              <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-03.jpg 2x">
-              <img class="hero-slider__image" src="img/hero/hero-mobile-03.jpg" width="320" height="568" alt="Девушка с книгой">
-            </picture>
-          </div>
-          <h2 class="hero-slider__title">Программы стажировок
-            в крупнейших компаниях мира</h2>
-          <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-          <a class="hero-slider__link" href="#">Подробнее</a>
-        </li>
-      </ul>
     </div>
-  </section>
+  </header>
 
+  <main>
+    <section class="hero">
+      <h1 class="visually-hidden">Первый блок</h1>
+      <div class="hero__slider hero-slider">
+        <div class="hero-slider__pagination">
+          <button class="hero-slider__pagination-button hero-slider__pagination-button--active" type="button"><span class="hero-slider__pagination-button-span"></span><span class="visually-hidden">1</span></button>
+          <button class="hero-slider__pagination-button" type="button"><span class="hero-slider__pagination-button-span"></span><span class="visually-hidden">2</span></button>
+          <button class="hero-slider__pagination-button" type="button"><span class="hero-slider__pagination-button-span"></span><span class="visually-hidden">3</span></button>
+        </div>
+        <ul class="hero-slider__list">
+          <li class="hero-slider__item">
+            <div class="hero-slider__image-wrapper">
+              <picture>
+                <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-01.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-01.webp 2x">
+                <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-01.webp 2x">
+                <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-01.jpg 2x">
+                <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-01.jpg 2x">
+                <img class="hero-slider__image" src="img/hero/hero-mobile-01.jpg" width="320" height="568" alt="Девушка с книгой">
+              </picture>
+            </div>
+            <div class="hero-slider__wrapper">
+
+              <h2 class="hero-slider__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+              <div class="hero-slider__inner">
+                <p>Погрузитесь в академическую
+                  программу, проходя практику
+                  в разных городах, ощущая
+                  настоящий студенческий стиль жизни!</p>
+                <div class="hero-slider__link-wrapper">
+                  <a class="hero-slider__link button" href="#"><span>Подробнее</span></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="hero-slider__item">
+            <div class="hero-slider__image-wrapper">
+              <picture>
+                <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-02.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-02.webp 2x">
+                <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-02.webp 2x">
+                <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-02.jpg 2x">
+                <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-02.jpg 2x">
+                <img class="hero-slider__image" src="img/hero/hero-mobile-02.jpg" width="320" height="568" alt="Девушка с книгой">
+              </picture>
+            </div>
+            <div class="hero-slider__wrapper">
+              <h2 class="hero-slider__title">Волонтёрские программы –
+                внесите свой вклад в общество</h2>
+              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+              <div class="hero-slider__link-wrapper">
+                <a class="hero-slider__link button" href="#"><span>Подробнее</span></a>
+              </div>
+            </div>
+          </li>
+          <li class="hero-slider__item">
+            <div class="hero-slider__image-wrapper">
+              <picture>
+                <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-03.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-03.webp 2x">
+                <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-03.webp 2x">
+                <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-03.jpg 2x">
+                <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-03.jpg 2x">
+                <img class="hero-slider__image" src="img/hero/hero-mobile-03.jpg" width="320" height="568" alt="Девушка с книгой">
+              </picture>
+            </div>
+            <div class="hero-slider__wrapper">
+              <h2 class="hero-slider__title">Программы стажировок
+                в крупнейших компаниях мира</h2>
+              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+              <div class="hero-slider__link-wrapper">
+                <a class="hero-slider__link button" href="#"><span>Подробнее</span></a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
   <!-- пример использования спрайта
     <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
@@ -155,6 +175,7 @@
     <div data-test="form">form</div>
     <div data-test="footer">footer</div> -->
   <script type="module" src="js/main.js"></script>
+
 </body>
 
 </html>

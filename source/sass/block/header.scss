@@ -1,27 +1,239 @@
 .header {
+  display: flex;
   position: absolute;
+  width: 100%;
+
+  // height: 100vw;
+
+  // z-index: 2;
+}
+
+.header--overlay {
+  background-color: $color-overlay-alt;
+}
+
+.header__wrapper {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  z-index: 10;
 }
 
 .header__container {
+  position: relative;
   display: flex;
-  justify-content: space-between;
+  min-height: 54px;
+  justify-content: flex-end;
 }
 
 .header__logo-wrapper {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 52px;
   height: 52px;
+  left: 0;
 }
 
 .header-nav {
   display: flex;
 }
 
-.header__nav-list {
-  display: none;
+.header__menu-button {
+  height: 54px;
+  width: 134px;
+  align-items: center;
+  background-color: $color-button-light;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  transition: width 150ms ease-in;
+  user-select: none;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 46px;
+    height: 46px;
+    background-color: $color-button;
+    border-radius: 50%;
+    right: 5px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    right: 5px;
+    background-color: $color-button-light;
+    mask-image: url("../../img/sprite/menu.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 22px 22px;
+    transition: transform 150ms ease-out;
+  }
 }
+
+.header__menu-button:disabled {
+  &::before {
+    background-color: $color-disabled;
+  }
+}
+
+.header__menu-button:not(:disabled):hover {
+  &::before {
+    background-color: $color-button-light;
+  }
+
+  &::after {
+    background-color: $color-button;
+    transform: rotate(180deg);
+  }
+}
+
+.header__menu-button:not(:disabled):active {
+  &::before {
+    background-color: $color-button-light;
+  }
+
+  &::after {
+    background-color: $color-button;
+    opacity: 0.7;
+  }
+}
+
+.header__menu-button .header__menu-text {
+  padding-left: 21px;
+  padding-right: 71px;
+}
+
+.header__nav--open .header__menu-button {
+  width: 290px;
+  background-color: $color-button;
+  color: $color-button-light;
+
+  &::before {
+    background-color: $color-button-light;
+  }
+
+  &::after {
+    background-color: $color-button;
+    mask-image: url("../../img/sprite/cross.svg");
+  }
+}
+
+.header__nav--open:hover .header__menu-button {
+  border: 1px solid $color-button;
+
+  &::before {
+    background-color: $color-button;
+  }
+
+  &::after {
+    background-color: $color-button-light;
+    mask-image: url("../../img/sprite/cross.svg");
+  }
+}
+
+.header__nav-list {
+  position: absolute;
+  top: 58px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 290px;
+  max-height: 0;
+  overflow: hidden;
+  background-color: $color-button;
+  border-radius: 16px;
+  margin: 0;
+  padding-left: 35px;
+  padding-right: 35px;
+  list-style: none;
+
+  opacity: 0;
+  transition: all 300ms ease;
+}
+
+.header__nav--open .header__nav-list {
+  opacity: 1;
+  display: flex;
+  max-height: unset;
+  padding: 25px 35px;
+}
+
+.header__nav-item {
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-link {
+  display: flex;
+  opacity: 0.7;
+  width: fit-content;
+  padding: 0;
+}
+
+.header__nav-link:hover {
+  opacity: 1;
+}
+
+.header__nav-link--secondary {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    right: -20px;
+    transform: scale(1, -1);
+    background-color: $color-bg-alt;
+    mask-image: url("../../img/sprite/arror-nav.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: transform 150ms ease;
+  }
+}
+
+.header__nav-list-secondary {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  padding-top: 0;
+  gap: 16px;
+  list-style: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 300ms ease;
+}
+
+.header__nav-list-secondary--open {
+  max-height: unset;
+  padding-top: 15px;
+}
+
+.header__nav-list-secondary .header__nav-link {
+  text-transform: none;
+}
+
+.header__nav-link--active {
+  opacity: 1;
+
+
+  &::after {
+    transform: scale(1, 1);
+  }
+}
+

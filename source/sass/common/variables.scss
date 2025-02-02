@@ -1,53 +1,84 @@
-// Шрифт
+// // Шрифт
 
-$font-family-main: "Manrope", "Arial" sans-serif;
-$font-caption: 400 12px / 12px $font-family-main;
-$font-mobile-button: 500 12px / 12px $font-family-main;
-$font-tablet-button: 500 14px / 14px $font-family-main;
+// $font-family-main: "Manrope", "Arial" sans-serif;
+// $font-caption: 400 12px / 12px $font-family-main;
+// $font-mobile-button: 500 12px / 12px $font-family-main;
+// $font-tablet-button: 500 14px / 14px $font-family-main;
 
-// Заголовки mobile
-$font-mobile-h1: 400 22px / 26px $font-family-main;
-$font-mobile-h2: 400 20px / 20px $font-family-main;
-$font-mobile-h3: 400 18px / 22px $font-family-main;
-$font-mobile-h4: 400 16px / 18px $font-family-main;
-$font-mobile-h5: 400 16px / 20px $font-family-main;
-$font-mobile-h6: 400 16px / 18px $font-family-main;
+// // Заголовки mobile
+// $font-mobile-h1: 400 22px / 26px $font-family-main;
+// $font-mobile-h2: 400 20px / 20px $font-family-main;
+// $font-mobile-h3: 400 18px / 22px $font-family-main;
+// $font-mobile-h4: 400 16px / 18px $font-family-main;
+// $font-mobile-h5: 400 16px / 20px $font-family-main;
+// $font-mobile-h6: 400 16px / 18px $font-family-main;
 
-// Заголовки tablet
-$font-tablet-h1: 400 36px / 44px $font-family-main;
-$font-tablet-h2: 400 34px / 50px $font-family-main;
-$font-tablet-h3: 400 28px / 28px $font-family-main;
-$font-tablet-h4: 400 22px / 26px $font-family-main;
-$font-tablet-h5: 400 20px / 22px $font-family-main;
-$font-tablet-h6: 400 20px / 24px $font-family-main;
+// // Заголовки tablet
+// $font-tablet-h1: 400 36px / 44px $font-family-main;
+// $font-tablet-h2: 400 34px / 50px $font-family-main;
+// $font-tablet-h3: 400 28px / 28px $font-family-main;
+// $font-tablet-h4: 400 22px / 26px $font-family-main;
+// $font-tablet-h5: 400 20px / 22px $font-family-main;
+// $font-tablet-h6: 400 20px / 24px $font-family-main;
 
-// Заголовки desktop
-$font-desktop-h1: 400 54px / 62px $font-family-main;
-$font-desktop-h2: 400 50px / 50px $font-family-main;
-$font-desktop-h3: 400 32px / 36px $font-family-main;
-$font-desktop-h4: 400 28px / 34px $font-family-main;
-$font-desktop-h5: 400 26px / 30px $font-family-main;
-$font-desktop-h6: 400 24px / 26px $font-family-main;
+// // Заголовки desktop
+// $font-desktop-h1: 400 54px / 62px $font-family-main;
+// $font-desktop-h2: 400 50px / 50px $font-family-main;
+// $font-desktop-h3: 400 32px / 36px $font-family-main;
+// $font-desktop-h4: 400 28px / 34px $font-family-main;
+// $font-desktop-h5: 400 26px / 30px $font-family-main;
+// $font-desktop-h6: 400 24px / 26px $font-family-main;
 
-// Текст mobile
-$font-mobile-big: 400 16px / 22px $font-family-main;
-$font-mobile-regular: 400 14px / 20px $font-family-main;
-$font-mobile-small: 300 14px / 20px $font-family-main;
-$font-mobile-xsmall: 400 12px / 14px $font-family-main;
-$font-mobile-xxsmall: 400 12px / 14px $font-family-main;
+// // Текст mobile
+// $font-mobile-big: 400 16px / 22px $font-family-main;
+// $font-mobile-regular: 400 14px / 20px $font-family-main;
+// $font-mobile-small: 300 14px / 20px $font-family-main;
+// $font-mobile-xsmall: 400 12px / 14px $font-family-main;
+// $font-mobile-xxsmall: 400 12px / 14px $font-family-main;
 
-// Текст tablet
-$font-tablet-big: 400 20px / 16px $font-family-main;
-$font-tablet-medium: 400 16px / 26px $font-family-main;
-$font-tablet-regular: 400 16px / 20px $font-family-main;
-$font-tablet-small: 300 16px / 20px $font-family-main;
-$font-tablet-xsmall: 400 14px / 20px $font-family-main;
-$font-tablet-xxsmall: 400 12px / 12px $font-family-main;
+// // Текст tablet
+// $font-tablet-big: 400 20px / 16px $font-family-main;
+// $font-tablet-medium: 400 16px / 26px $font-family-main;
+// $font-tablet-regular: 400 16px / 20px $font-family-main;
+// $font-tablet-small: 300 16px / 20px $font-family-main;
+// $font-tablet-xsmall: 400 14px / 20px $font-family-main;
+// $font-tablet-xxsmall: 400 12px / 12px $font-family-main;
 
-// Текст desktop
-$font-desktop-big: 400 22px / 32px $font-family-main;
-$font-tablet-medium: 400 18px / 24px $font-family-main;
-$font-desktop-regular: 400 16px / 26px $font-family-main;
-$font-desktop-small: 300 16px / 20px $font-family-main;
-$font-desktop-xsmall: 400 14px / 18px $font-family-main;
-$font-desktop-xxsmall: 400 12px / 12px $font-family-main;
+// // Текст desktop
+// $font-desktop-big: 400 22px / 32px $font-family-main;
+// $font-tablet-medium: 400 18px / 24px $font-family-main;
+// $font-desktop-regular: 400 16px / 26px $font-family-main;
+// $font-desktop-small: 300 16px / 20px $font-family-main;
+// $font-desktop-xsmall: 400 14px / 18px $font-family-main;
+// $font-desktop-xxsmall: 400 12px / 12px $font-family-main;
+
+// Цвета текста
+$color-text: #484848;
+$color-text-alt: #316dc2;
+$color-text-light: #ffffff;
+$color-text-light-alt: #f0efe9;
+
+// Цвета кнопки
+$color-button: #316dc2;
+$color-button-light: #ffffff;
+$color-button-active: #275699;
+$color-disabled: #a9afb7;
+
+// Цвета форм
+$color-form-light: #ffffff;
+$color-form-dark: #484848;
+$color-form-error: #ff5e66;
+$color-disabled: #a9afb7;
+
+// Цвет фона
+$color-bg: #f0efe9;
+$color-bg-alt: #ffffff;
+$color-bg-accent: #316dc2;
+
+// Цвет иконок
+$color-icon: #316dc2;
+$color-icon-alt: #ffffff;
+
+// Цвета оверлея
+$color-overlay: rgba(49, 109, 194, 0.2);
+$color-overlay-alt: rgba(13, 29, 51, 0.4);
