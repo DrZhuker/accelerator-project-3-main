@@ -79,7 +79,7 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" data-test="hero">
       <h1 class="visually-hidden">Первый блок</h1>
       <div class="hero__slider hero-slider">
         <div class="hero-slider__pagination">
@@ -155,6 +155,235 @@
           </li>
         </ul>
       </div>
+    </section>
+
+    <section class="about" data-test="about">
+      <div class="about__wrapper">
+        <div class="about__wrapper-top">
+          <h1 class="about__title">О проекте «Стажировка»</h1>
+          <p>«Стажировка» — совместный проект
+            правительств и волонтёрских бригад.</p>
+        </div>
+        <div class="about__wrapper-bottom">
+          <h2>Наша цель</h2>
+          <span>Наша деятельность направлена на повышение квалификации
+            молодых специалистов на ранних и средних стадиях карьеры,
+            предоставляя им инструменты для решения сложных проблем,
+            с которыми сталкиваются в мире. Цель центра — наделить этих
+            людей способностью инициировать значимые изменения.</span>
+          <a class="about__link button" href="#">
+            <div>Подробнее о проекте</div>
+          </a>
+        </div>
+      </div>
+
+      <ul class="about__list">
+        <li>
+          <h2>Более 250 программ</h2>
+          <p>учебных и рабочих, разной
+            длительностью от 3 месяцев
+            до 1 года</p>
+        </li>
+        <li>
+          <h2>Более 3000 участников</h2>
+          <p>уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
+        </li>
+        <li>
+          <h2>участники из 60 стран</h2>
+          <p>студенты со всего мира приезжают на программу
+            «Стажировки» от 3 месяцев до 1 года</p>
+        </li>
+        <li>
+          <h2>от 4 200 $<br>
+            до 8 400 $</h2>
+          <p>грант всем участникам
+            для комфортного прохождения
+            программы</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="programs" data-test="programs">
+      <div class="programs__swiper swiper">
+        <h1 class="programs__title">Программы</h1>
+        <a class="programs__link button" href="#"><span>Все программы</span></a>
+        <!-- Additional required wrapper -->
+        <div class="programs__swiper-wrapper swiper-wrapper">
+          <!-- Slides -->
+          <div class="programs__swiper-slider swiper-slide">
+            <div class="programs__slider programs__slider--01">
+              <div class="programs__slider-container">
+                <h3>Стажировки</h3>
+                <a href="#">Получите незаменимый опыт
+                  работы в крупнейших мировых
+                  компаниях.</a>
+              </div>
+            </div>
+          </div>
+          <div class="programs__swiper-slider swiper-slide">
+            <div class="programs__slider programs__slider--02">
+              <div class="programs__slider-container">
+                <h3>Волонтёрство</h3>
+                <a href="#">Помогайте другим и развивайте свои лидерские качества</a>
+              </div>
+            </div>
+          </div>
+          <div class="programs__swiper-slider swiper-slide">
+            <div class="programs__slider programs__slider--03">
+              <div class="programs__slider-container">
+                <h3>Учёба</h3>
+                <a href="#">Получите образование и измените своё будущее.</a>
+              </div>
+            </div>
+          </div>
+          <div class="programs__swiper-slider swiper-slide">
+            <div class="programs__slider programs__slider--01">
+              <div class="programs__slider-container">
+                <h3>Учёба</h3>
+                <a href="#">Получите незаменимый опыт
+                  работы в крупнейших мировых
+                  компаниях.</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="programs__swiper-button-wrapper">
+          <button class="programs__swiper-button programs__swiper-button-prev" type="button"><span class="visually-hidden">Назад</span></button>
+          <button class="programs__swiper-button programs__swiper-button-next" type="button"><span class="visually-hidden">Вперед</span></button>
+        </div>
+
+        <!-- If we need scrollbar -->
+        <div class="programs__swiper-scrollbar swiper-scrollbar">
+          <div class="programs__swiper-scroll">
+            <button class="programs__swiper-scroll-button" type="button"><span class="visually-hidden">Скролл</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grant" data-test="grant">
+      <div class="grant__container">
+        <div class="grant__wrapper-top">
+          <h1 class="grant__title">Как поехать</h1>
+          <p>Свяжитесь с координатором, чтобы узнать
+            полную информацию. Вы получите
+            актуальные сведения о доступных
+            программах и городах, в которых можете
+            пройти программу.</p>
+          <div class="grant__image-wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" width="498" height="363" srcset="img/grant/grant-desktop.webp">
+              <source media="(min-width: 768px)" type="image/webp" width="678" height="375" srcset="img/grant/grant-tablet.webp">
+              <source type="image/webp" width="290" height="200" srcset="img/grant/grant-mobile.webp">
+              <source media="(min-width: 1440px)" type="image/jpg" width="498" height="363" srcset="img/grant/grant-desktop.jpg">
+              <source media="(min-width: 768px)" type="image/jpg" width="709" height="375" srcset="img/grant/grant-tablet.jpg">
+              <img class="grant__image" src="img/grant/grant-mobile.jpg" width="290" height="200" alt="Указатели">
+            </picture>
+          </div>
+        </div>
+        <div class="grant__wrapper-bottom">
+          <div class="grant__list-description">Чтобы получить грант
+            на обучение, вам нужно:</div>
+          <ol class="grant__list">
+            <li class="grant__item">Быть в возрасте от 16 до 30 лет</li>
+
+            <li class="grant__item">Иметь оконченное среднее образование</li>
+
+            <li class="grant__item">Иметь документально подтверждённое отсутствие
+              судимости и пройти консульскую проверку</li>
+
+            <li class="grant__item">За последние 2 года быть не больше 3х месяцев
+              подряд непрерывно в одной стране</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="news" data-test="news">
+      <h1 class="news__title">Новости и материалы</h1>
+      <form class="news__form" action="#">
+        <div class="news__tab-wrapper">
+          <ul class="news__tab-list">
+            <li class="news__tab-item">
+              <label class="news__tab-label" for="all-tab">Общее</label>
+              <input class="news__tab-input" type="radio" id="all-tab" name="tab" checked>
+            </li>
+            <li class="news__tab-item">
+              <label class="news__tab-label" for="volunteer-tab">Волонтёрство</label>
+              <input class="news__tab-input" type="radio" id="volunteer-tab" name="tab">
+            </li>
+            <li class="news__tab-item">
+              <label class="news__tab-label" for="internship-tab">Стажировки</label>
+              <input class="news__tab-input" type="radio" id="internship-tab" name="tab">
+            </li>
+            <li class="news__tab-item">
+              <label class="news__tab-label" for="career-tab">Карьера</label>
+              <input class="news__tab-input" type="radio" id="career-tab" name="tab">
+            </li>
+            <li class="news__tab-item">
+              <label class="news__tab-label" for="journey-tab">Путешествие</label>
+              <input class="news__tab-input" type="radio" id="journey-tab" name="tab">
+            </li>
+          </ul>
+        </div>
+
+        <ul class="news__news-list">
+          <li class="news__news-item">
+            <time class="news__news-time" datetime="2023-03-23">23/03/2023</time>
+            <h3 class="news__news-title">Интервью
+              с участницей
+              программы
+              стажировки</h3>
+            <p><a href="#">Саша рассказывает,
+              как попала в программу
+              и как прошла 6-месячная
+              стажировка в ISOFound</a></p>
+          </li>
+          <li class="news__news-item">
+            <time class="news__news-time" datetime="2023-03-20">20/03/2023</time>
+            <h3 class="news__news-title">Путешествуем
+              по миру</h3>
+            <p><a href="#">Какие места посещают
+              наши студенты весной</a></p>
+          </li>
+          <li class="news__news-item">
+            <time class="news__news-time" datetime="2023-03-17">17/03/2023</time>
+            <h3 class="news__news-title">Новая программа
+              волонтёрства</h3>
+            <p><a href="#">Программа помощи детям
+              длительностью 4 месяца</a></p>
+          </li>
+          <li class="news__news-item">
+            <time class="news__news-time" datetime="2023-03-10">10/03/2023</time>
+            <h3 class="news__news-title">Построй свою
+              карьеру</h3>
+            <p><a href="#">Ведущие компании
+              готовы трудоустроить
+              выпускников стажировки</a></p>
+          </li>
+        </ul>
+        <div class="news__pagination">
+          <button class="news__pagination-button news__pagination-button--prev" type="button"><span class="visually-hidden">Назад</span>
+          </button>
+          <ul class="news__pagination-list">
+            <li class="news__pagionation-item">
+              <a class="pagibation__link" href="#">1</a>
+            </li>
+            <li class="news__pagionation-item">
+              <a class="pagibation__link" href="#">2</a>
+            </li>
+            <li class="news__pagionation-item">
+              <a class="pagibation__link" href="#">3</a>
+            </li>
+            <li class="news__pagionation-item">
+              <a class="pagibation__link" href="#">4</a>
+            </li>
+          </ul>
+          <button class="news__pagination-button news__pagination-button--next" type="button"><span class="visually-hidden">Вперед</span>
+          </button>
+        </div>
+      </form>
     </section>
 
   </main>
