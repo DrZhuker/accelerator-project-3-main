@@ -355,13 +355,13 @@
   }
 }
 
-.programs__swiper-button-prev {
+.programs__swiper-button--prev {
   &::before {
     mask-image: url("../../img/sprite/arror-l.svg");
   }
 }
 
-.programs__swiper-button-next {
+.programs__swiper-button--next {
   right: 0;
 
   &::before {
