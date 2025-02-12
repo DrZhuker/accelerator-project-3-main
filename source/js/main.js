@@ -16,3 +16,11 @@ import { initSwiper } from './swiper.js';
 document.addEventListener('DOMContentLoaded', () => {
   initSwiper();
 });
+
+import { initReviewsSwiper } from './swiper-reviews';
+
+// Инициализация слайдера отзывов
+initReviewsSwiper();
+
+
+import './accordeon.js';

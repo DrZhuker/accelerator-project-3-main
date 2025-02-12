@@ -1,0 +1,234 @@
+.faq {
+  display: flex;
+  width: 320px;
+  padding: 50px 15px;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (width >= 768px) {
+    width: 768px;
+    padding: 50px 45px;
+  }
+
+  @media (width >= 1028px) {
+    width: 1028px;
+    padding: 50px 100px;
+  }
+}
+
+.faq__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: $color-text-alt;
+
+  @media (width >= 768px) {
+    font-size: 34px;
+    line-height: 50px;
+    margin-bottom: 40px;
+  }
+
+  @media (width >= 1028px) {
+    font-size: 50px;
+    line-height: 50px;
+    margin-bottom: 71px;
+  }
+}
+
+.faq__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.faq__item {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 15px;
+  border: 2px solid $color-button;
+  border-radius: 14px;
+  cursor: pointer;
+
+  @media (width >= 768px) {
+    padding: 39px 32px;
+  }
+
+  @media (width >= 1028px) {
+    padding: 45px 42px;
+  }
+}
+
+.faq__item:hover {
+  background-color: $color-bg-alt;
+}
+
+.faq__item-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq__item-title {
+  padding-right: 70px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: $color-text-alt;
+  margin: 0;
+  display: flex;
+  align-items: center;
+
+  @media (width >= 768px) {
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @media (width >= 1028px) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.faq__button {
+  position: absolute;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  background-color: $color-bg-accent;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    right: 0;
+    background-color: $color-bg-alt;
+    border-radius: 50%;
+    mask-image: url("../../img/sprite/plus.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 18px 18px;
+  }
+}
+
+.faq__button:disabled {
+  cursor: unset;
+  background-color: $color-disabled;
+}
+
+.faq__item:hover .faq__button:not(:disabled),
+.faq__item:focus-visible .faq__button:not(:disabled) {
+  background-color: unset;
+  outline: 1px solid $color-bg-accent;
+
+  &::after {
+    background-color: $color-bg-accent;
+  }
+}
+
+.faq__item:active .faq__button:not(:disabled) {
+  background-color: $color-button-active;
+  outline: none;
+
+  &::after {
+    background-color: $color-bg-alt;
+  }
+}
+
+.faq p {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, margin-top 0.3s ease-out;
+  display: flex;
+  padding: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  margin: 0;
+
+  @media (width >= 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (width >= 1028px) {
+    line-height: 26px;
+  }
+}
+
+.faq__item--active {
+  background-color: $color-bg-accent;
+  color: $color-text-light;
+}
+
+.faq__item--active:hover {
+  background-color: $color-bg-accent;
+  color: $color-text-light;
+}
+
+.faq__item--active:active {
+  background-color: $color-button-active;
+  color: $color-text-light;
+}
+
+.faq__item--active .faq__item-title {
+  color: $color-text-light;
+}
+
+.faq__item--active p {
+  max-height: 200px;
+  margin-top: 20px;
+}
+
+.faq__item--active .faq__button {
+  background-color: $color-bg-alt;
+
+  &::after {
+    background-color: $color-bg-accent;
+    mask-image: url("../../img/sprite/minus.svg");
+  }
+}
+
+.faq__item--active .faq__button:disabled {
+  cursor: unset;
+  background-color: $color-disabled;
+
+  &::after {
+    background-color: $color-bg-alt;
+  }
+}
+
+.faq__item--active:hover .faq__button:not(:disabled),
+.faq__item--active:focus-visible .faq__button:not(:disabled) {
+  background-color: unset;
+  outline: 1px solid $color-bg-alt;
+
+  &::after {
+    background-color: $color-bg-alt;
+  }
+}
+
+.faq__item--active .faq__button:not(:disabled):active {
+  background-color: $color-bg-alt;
+  outline: none;
+
+  &::after {
+    background-color: $color-bg-accent;
+  }
+}

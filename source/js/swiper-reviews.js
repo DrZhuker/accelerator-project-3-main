@@ -4,8 +4,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-export function initSwiper() {
-  const swiperContainer = document.querySelector('.programs__swiper');
+export function initReviewsSwiper() {
+  const swiperContainer = document.querySelector('.reviews__swiper');
 
   if (!swiperContainer) {
     return null;
@@ -14,11 +14,11 @@ export function initSwiper() {
   const swiper = new Swiper(swiperContainer, {
     modules: [Navigation, Pagination],
     navigation: {
-      nextEl: '.programs__swiper-button--next',
-      prevEl: '.programs__swiper-button--prev',
+      nextEl: '.reviews__swiper-button--next',
+      prevEl: '.reviews__swiper-button--prev',
     },
     scrollbar: {
-      el: '.programs__swiper-scrollbar',
+      el: '.reviews__swiper-scrollbar',
       clickable: true,
     },
     slidesPerView: 1,
@@ -26,12 +26,12 @@ export function initSwiper() {
     slidesOffsetBefore: 15,
     breakpoints: {
       768: {
-        slidesPerView: 2,
+        slidesPerView: 1.2,
         spaceBetween: 24,
         slidesOffsetBefore: 0,
       },
       1440: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 32,
         slidesOffsetBefore: 0,
       },
@@ -58,8 +58,8 @@ export function initSwiper() {
 
 // Функция для обновления состояния кнопок
 function updateNavigation(swiper) {
-  const prevButton = document.querySelector('.programs__swiper-button-prev');
-  const nextButton = document.querySelector('.programs__swiper-button-next');
+  const prevButton = document.querySelector('.reviews__swiper-button--prev');
+  const nextButton = document.querySelector('.reviews__swiper-button--next');
 
   if (!prevButton || !nextButton) {
     return;
@@ -78,8 +78,8 @@ function updateNavigation(swiper) {
 
 // Функция для обновления положения скроллбара
 function updateScrollbar(swiper) {
-  const scrollbar = document.querySelector('.programs__swiper-scrollbar');
-  const scrollButton = document.querySelector('.programs__swiper-scroll-button');
+  const scrollbar = document.querySelector('.reviews__swiper-scrollbar');
+  const scrollButton = document.querySelector('.reviews__swiper-scroll-button');
 
   if (!scrollbar || !scrollButton) {
     return;
