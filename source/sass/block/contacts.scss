@@ -1,0 +1,138 @@
+.contacts {
+  display: flex;
+  background-color: $color-bg-accent;
+  color: $color-text-light;
+}
+
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  margin: 0 auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @media (width >= 768px) {
+    width: 678px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media (width >= 1440px) {
+    width: 1240px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+.contacts__wrapper-top {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: $color-bg-alt;
+    opacity: 0.2;
+  }
+
+  @media (width >= 768px) {
+    width: 100%;
+  }
+
+  @media (width >= 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.contacts__title {
+  display: flex;
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0%;
+
+  @media (width >= 768px) {
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  @media (width >= 1440px) {
+    font-size: 50px;
+    line-height: 50px;
+  }
+}
+
+.contacts__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (width >= 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (width >= 1440px) {
+    gap: 52px;
+  }
+}
+
+
+.contacts__description {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (width >= 768px) {
+    gap: 24px;
+  }
+
+  @media (width >= 1440px) {
+    max-width: 265px;
+  }
+}
+
+.contacts__description span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  color: $color-text-light-alt;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.contacts__description address,
+.contacts__description a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: $color-text-light;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.contacts__wrapper-map {
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.contacts__map {
+  display: flex;
+}

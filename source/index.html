@@ -648,7 +648,129 @@
         </div>
       </div>
     </section>
+
+    <section class="contacts" data-test="contacts">
+      <div class="contacts__wrapper">
+        <div class="contacts__wrapper-top">
+          <h1 class="contacts__title">Контакты</h1>
+          <div class="contacts__inner">
+            <div class="contacts__description">
+              <span>Центральный офис</span>
+              <address>г. Новосибирск, ул. Щетинкина 68,
+                культурный центр</address>
+            </div>
+            <p class="contacts__description">
+              <span>Телефон</span>
+              <a href="tel:+796387687676">+7 963 876 876 76</a>
+            </p>
+            <p class="contacts__description">
+              <span>Email</span>
+              <a href="mailto:info@stazh.ru">Info@stazh.ru</a>
+            </p>
+          </div>
+        </div>
+        <div class="contacts__wrapper-map">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" width="1240" height="486" srcset="img/contact/desktop-map@2x.webp">
+            <source media="(min-width: 768px)" type="image/webp" width="678" height="500" srcset="img/contact/tablet-map@2x.webp">
+            <source type="image/webp" width="290" height="240" srcset="img/contact/mobile-map@2x.webp">
+            <source media="(min-width: 1440px)" type="image/jpg" width="1240" height="486" srcset="img/contact/desktop-map@2x.jpg">
+            <source media="(min-width: 768px)" type="image/jpg" width="678" height="500" srcset="img/contact/tablet-map@2x.jpg">
+            <img class="contacts__map" src="img/contact/mobile-map@2x.jpg" width="290" height="240" alt="Аватар">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="form">
+      <div class="form__wrapper">
+        <div class="form__inner">
+          <h1 class="form__title">Напишите нам</h1>
+          <p class="form__description">Оставьте ваши контакты, если у вас
+            остались <br>вопросы — мы на них ответим!</p>
+          <form class="form__form" action="#">
+            <div class="form__input-wrapper">
+              <label class="form__label" for="input-name">Имя</label>
+              <div class="form__input-container">
+                <input class="form__input form__input--name" type="text" id="input-name" name="input-name">
+              </div>
+            </div>
+            <div class="form__input-wrapper">
+              <label class="form__label" for="input-phone">Телефон</label>
+              <div class="form__input-container">
+                <input class="form__input form__input--phone" type="text" id="input-phone" name="input-phone">
+              </div>
+            </div>
+            <div class="form__input-wrapper">
+              <label class="form__label" for="input-message">Ваше сообщение</label>
+              <div class="form__input-container">
+                <textarea class="form__input form__input--message" type="text" id="input-message" name="input-message"></textarea>
+              </div>
+            </div>
+            <div class="form__input-wrapper">
+              <label class="form__label" for="input-city">Выберите город</label>
+              <div class="form__input-container">
+                <select class="form__input form__input--city" name="input-city" id="input-city">
+                  <option value="" selected disabled hidden></option>
+                  <option value="city-moskow">Москва</option>
+                  <option value="city-spb">Санкт-Питербург</option>
+                  <option value="city-zhel">Железногорск</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__input-wrapper">
+              <div class="form__checkbox-container">
+                <label class="form__label form__label--checkbox" for="input-chekbox">
+                  <input class="form__checkbox" type="checkbox" id="input-chekbox" name="input-chekbox">
+                  <div class="form__checkbox-checkbox"></div>
+                  <span>Я согласен на обработку моих персональных <br>данных</span>
+                </label>
+              </div>
+            </div>
+          </form>
+          <button class="button button--alt form__button" type="button"><span>Отправить</span></button>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="footer" data-test="footer">
+    <div class="footer__logo-wrapper">
+      <img class="footer__logo" src="img/logo/logotype.png" alt="Логотип" width="52" height="52">
+    </div>
+    <ul class="footer__nav-list">
+      <li class="footer__nav-item">
+        <a class="footer__nav-link" href="#">О проекте</a>
+      </li>
+      <li class="footer__nav-item">
+        <a class="footer__nav-link" href="#">Программы</a>
+      </li>
+      <li class="footer__nav-item">
+        <a class="footer__nav-link" href="#">Как поехать</a>
+      </li>
+      <li class="footer__nav-item">
+        <a class="footer__nav-link" href="#">Отзывы</a>
+      </li>
+      <li class="footer__nav-item">
+        <a class="footer__nav-link" href="#">Новости</a>
+      </li>
+      <li class="footer__nav-item">
+        <a class="footer__nav-link" href="#">Контакты</a>
+      </li>
+    </ul>
+    <a class="footer__privacy-link" href="#">Политика конфиденциальности</a>
+    <p class="footer__privacy-text">Стажировка © 2023 Все права защищены</p>
+    <ul class="footer__social-list">
+      <li class="footer__social-item">
+        <a class="footer__social-link footer__social-link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
+      </li>
+      <li class="footer__social-item">
+        <a class="footer__social-link footer__social-link--ok" href="#"><span class="visually-hidden">Одноклассники</span></a>
+      </li>
+      <li class="footer__social-item">
+        <a class="footer__social-link footer__social-link--rd" href="#"><span class="visually-hidden">Reddit</span></a>
+      </li>
+    </ul>
+  </footer>
   <!-- пример использования спрайта
     <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
     <svg>
