@@ -79,83 +79,74 @@
   </header>
 
   <main>
-    <!-- <section class="hero" data-test="hero">
+    <section class="hero" data-test="hero">
       <h1 class="visually-hidden">Первый блок</h1>
-      <div class="hero__slider hero-slider">
-        <div class="hero-slider__pagination">
-          <button class="hero-slider__pagination-button hero-slider__pagination-button--active" type="button"><span class="hero-slider__pagination-button-span"></span><span class="visually-hidden">1</span></button>
-          <button class="hero-slider__pagination-button" type="button"><span class="hero-slider__pagination-button-span"></span><span class="visually-hidden">2</span></button>
-          <button class="hero-slider__pagination-button" type="button"><span class="hero-slider__pagination-button-span"></span><span class="visually-hidden">3</span></button>
-        </div>
-        <ul class="hero-slider__list">
-          <li class="hero-slider__item">
-            <div class="hero-slider__image-wrapper">
+      <div class="hero__slider swiper">
+        <div class="swiper-wrapper">
+          <div class="hero__item swiper-slide">
+            <div class="hero__image-wrapper">
               <picture>
                 <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-01.webp 2x">
                 <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-01.webp 2x">
                 <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-01.webp 2x">
                 <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-01.jpg 2x">
                 <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-01.jpg 2x">
-                <img class="hero-slider__image" src="img/hero/hero-mobile-01.jpg" width="320" height="568" alt="Девушка с книгой">
+                <img class="hero__image" src="img/hero/hero-mobile-01.jpg" width="320" height="568" alt="Девушка с книгой">
               </picture>
             </div>
-            <div class="hero-slider__wrapper">
-
-              <h2 class="hero-slider__title">Глобальный профессиональный опыт обучения за рубежом</h2>
-              <div class="hero-slider__inner">
-                <p>Погрузитесь в академическую
-                  программу, проходя практику
-                  в разных городах, ощущая
-                  настоящий студенческий стиль жизни!</p>
-                <div class="hero-slider__link-wrapper">
-                  <a class="hero-slider__link button" href="#"><span>Подробнее</span></a>
-                </div>
+            <div class="hero__wrapper">
+              <h2 class="hero__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+              <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+              <div class="hero__link-wrapper">
+                <a class="hero__link button" href="#"><span>Подробнее</span></a>
               </div>
             </div>
-          </li>
-          <li class="hero-slider__item">
-            <div class="hero-slider__image-wrapper">
+          </div>
+
+          <div class="hero__item swiper-slide">
+            <div class="hero__image-wrapper">
               <picture>
                 <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-02.webp 2x">
                 <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-02.webp 2x">
                 <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-02.webp 2x">
                 <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-02.jpg 2x">
                 <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-02.jpg 2x">
-                <img class="hero-slider__image" src="img/hero/hero-mobile-02.jpg" width="320" height="568" alt="Девушка с книгой">
+                <img class="hero__image" src="img/hero/hero-mobile-02.jpg" width="320" height="568" alt="Девушка с книгой">
               </picture>
             </div>
-            <div class="hero-slider__wrapper">
-              <h2 class="hero-slider__title">Волонтёрские программы –
-                внесите свой вклад в общество</h2>
-              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-              <div class="hero-slider__link-wrapper">
-                <a class="hero-slider__link button" href="#"><span>Подробнее</span></a>
+            <div class="hero__wrapper">
+              <h2 class="hero__title">Волонтёрские программы – внесите свой вклад в общество</h2>
+              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+              <div class="hero__link-wrapper">
+                <a class="hero__link button" href="#"><span>Подробнее</span></a>
               </div>
             </div>
-          </li>
-          <li class="hero-slider__item">
-            <div class="hero-slider__image-wrapper">
+          </div>
+
+          <div class="hero__item swiper-slide">
+            <div class="hero__image-wrapper">
               <picture>
-                <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-03.webp 2x">
-                <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-03.webp 2x">
-                <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-03.webp 2x">
-                <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-03.jpg 2x">
-                <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-03.jpg 2x">
-                <img class="hero-slider__image" src="img/hero/hero-mobile-03.jpg" width="320" height="568" alt="Девушка с книгой">
-              </picture>
+                  <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-03.webp 2x">
+                  <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-03.webp 2x">
+                  <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-03.webp 2x">
+                  <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-03.jpg 2x">
+                  <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-03.jpg 2x">
+                  <img class="hero__image" src="img/hero/hero-mobile-03.jpg" width="320" height="568" alt="Девушка с книгой">
+                </picture>
             </div>
-            <div class="hero-slider__wrapper">
-              <h2 class="hero-slider__title">Программы стажировок
-                в крупнейших компаниях мира</h2>
-              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-              <div class="hero-slider__link-wrapper">
-                <a class="hero-slider__link button" href="#"><span>Подробнее</span></a>
+            <div class="hero__wrapper">
+              <h2 class="hero__title">Программы стажировок в крупнейших компаниях мира</h2>
+              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+              <div class="hero__link-wrapper">
+                <a class="hero__link button" href="#"><span>Подробнее</span></a>
               </div>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
+
+        <div class="hero__pagination swiper-pagination"></div>
       </div>
-    </section> -->
+    </section>
 
     <section class="about" data-test="about">
       <div class="about__wrapper">

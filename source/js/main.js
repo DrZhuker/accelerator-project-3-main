@@ -24,3 +24,5 @@ initReviewsSwiper();
 
 
 import './accordeon.js';
+
+import './swiper-hero.js';

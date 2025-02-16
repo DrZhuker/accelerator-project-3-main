@@ -1,0 +1,336 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(214, 226, 243);
+  align-items: center;
+  z-index: -2;
+}
+
+
+.hero__list li:nth-child(n+2) {
+  display: none;
+}
+
+.hero__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero__item {
+  height: 568px;
+  display: flex;
+  align-items: flex-end;
+
+  @media (width >= 768px) {
+    height: 1024px;
+  }
+}
+
+.hero__image-wrapper {
+  position: absolute;
+  z-index: -1;
+}
+
+.hero__image {
+  display: flex;
+}
+
+.hero__wrapper {
+  width: 320px;
+  padding: 20px 15px;
+  z-index: 2;
+
+  @media (width >= 768px) {
+    width: 768px;
+  }
+}
+
+.hero__inner {
+  @media (width >= 768px) {
+    display: flex;
+  }
+}
+
+.hero__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: $color-text-alt;
+  background-color: $color-bg-alt;
+  border-radius: 0 16px 16px 0;
+  padding: 20px 16px 15px 14px;
+
+  @media (width >= 768px) {
+    padding: 30px 69px 24px 40px;
+    font-size: 36px;
+    line-height: 44px;
+    border-radius: 0 30px 30px 0;
+  }
+}
+
+.hero p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  background-color: $color-bg-alt;
+  width: 267px;
+  padding: 0 14px 15px;
+  border-radius: 0 0 16px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 10px;
+    background-image: url("../../img/sprite/ugol-p.svg");
+    background-size: 8px 10px;
+    right: -8px;
+  }
+
+
+  @media (width >= 768px) {
+    padding: 0 74px 35px 40px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 355px;
+    border-radius: 0 0 0 30px;
+
+    &::before {
+      position: absolute;
+      content: none;
+    }
+  }
+}
+
+.hero__link-wrapper {
+  display: flex;
+  width: fit-content;
+  padding: 10px 15px;
+  background-color: $color-bg-alt;
+  border-radius: 0 0 30px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url("../../img/sprite/ugol-link.svg");
+    background-size: 10px 10px;
+    right: -10px;
+    top: 0;
+  }
+}
+
+.hero__link {
+  width: 154px;
+  height: 44px;
+  display: flex;
+  padding-left: 21px;
+  padding-right: 59px;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    right: 5px;
+    background-color: $color-button;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: $color-bg-alt;
+    width: 34px;
+    height: 34px;
+    right: 5px;
+    mask-image: url("../../img/sprite/arror-tr.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: all 150ms ease;
+  }
+}
+
+.hero__link:hover {
+  &::before {
+    background-color: $color-bg-alt;
+  }
+
+  &::after {
+    mask-image: url("../../img/sprite/arror-r.svg");
+    background-color: $color-button;
+    right: 4px;
+  }
+}
+
+.hero__link:active span {
+  opacity: 0.7;
+}
+
+.hero__link:focus {
+  &::after {
+    mask-image: url("../../img/sprite/arror-r.svg");
+    right: 4px;
+  }
+}
+
+
+.hero__pagination {
+  position: absolute;
+  top: 203px;
+  left: calc(((100% - 290px) / 2));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // gap: 13px;
+  width: 80px;
+  height: 28px;
+  background-color: $color-bg-alt;
+  border-radius: 12px 12px 0 0;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-image: url("../../img/sprite/ugol-pag.svg");
+    right: -10px;
+    bottom: 0;
+  }
+}
+
+.hero__pagination-button {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: unset;
+  outline: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hero__pagination-button-span {
+  display: flex;
+  width: 8px;
+  height: 8px;
+  border: 2px solid $color-button;
+  border-radius: 50%;
+}
+
+.hero__pagination-button:hover .hero__pagination-button-span {
+  background-color: $color-button;
+  opacity: 0.7;
+  border: 2px solid #ffffff;
+}
+
+.hero__pagination-button:focus .hero__pagination-button-span {
+  background-color: $color-button;
+  border: none;
+}
+
+.hero__pagination-button--active .hero__pagination-button-span {
+  background-color: $color-button-active;
+  border: 2px solid $color-button-active;
+}
+
+
+<section class="hero" data-test="hero">
+<h1 class="visually-hidden">Первый блок</h1>
+<div class="hero__slider">
+  <div class="hero__pagination">
+    <button class="hero__pagination-button hero__pagination-button--active" type="button"><span class="hero__pagination-button-span"></span><span class="visually-hidden">1</span></button>
+    <button class="hero__pagination-button" type="button"><span class="hero__pagination-button-span"></span><span class="visually-hidden">2</span></button>
+    <button class="hero__pagination-button" type="button"><span class="hero__pagination-button-span"></span><span class="visually-hidden">3</span></button>
+  </div>
+  <ul class="hero__list">
+    <li class="hero__item">
+      <div class="hero__image-wrapper">
+        <picture>
+          <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-01.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-01.webp 2x">
+          <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-01.webp 2x">
+          <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-01.jpg 2x">
+          <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-01.jpg 2x">
+          <img class="hero__image" src="img/hero/hero-mobile-01.jpg" width="320" height="568" alt="Девушка с книгой">
+        </picture>
+      </div>
+      <div class="hero__wrapper">
+
+        <h2 class="hero__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+        <div class="hero__inner">
+          <p>Погрузитесь в академическую
+            программу, проходя практику
+            в разных городах, ощущая
+            настоящий студенческий стиль жизни!</p>
+          <div class="hero__link-wrapper">
+            <a class="hero__link button" href="#"><span>Подробнее</span></a>
+          </div>
+        </div>
+      </div>
+    </li>
+    <li class="hero__item">
+      <div class="hero__image-wrapper">
+        <picture>
+          <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-02.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-02.webp 2x">
+          <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-02.webp 2x">
+          <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-02.jpg 2x">
+          <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-02.jpg 2x">
+          <img class="hero__image" src="img/hero/hero-mobile-02.jpg" width="320" height="568" alt="Девушка с книгой">
+        </picture>
+      </div>
+      <div class="hero__wrapper">
+        <h2 class="hero__title">Волонтёрские программы –
+          внесите свой вклад в общество</h2>
+        <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+        <div class="hero__link-wrapper">
+          <a class="hero__link button" href="#"><span>Подробнее</span></a>
+        </div>
+      </div>
+    </li>
+    <li class="hero__item">
+      <div class="hero__image-wrapper">
+        <picture>
+          <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-03.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-03.webp 2x">
+          <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-03.webp 2x">
+          <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-03.jpg 2x">
+          <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-03.jpg 2x">
+          <img class="hero__image" src="img/hero/hero-mobile-03.jpg" width="320" height="568" alt="Девушка с книгой">
+        </picture>
+      </div>
+      <div class="hero__wrapper">
+        <h2 class="hero__title">Программы стажировок
+          в крупнейших компаниях мира</h2>
+        <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+        <div class="hero__link-wrapper">
+          <a class="hero__link button" href="#"><span>Подробнее</span></a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+</section>
