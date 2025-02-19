@@ -11,11 +11,15 @@
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="MyWebSite" />
   <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="preload" href="../../fonts/manrope/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="../../fonts/manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="../../fonts/manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="sass/style.scss">
 </head>
 
 <body class="page-body">
   <header class="header">
+    <div class="header__overlay"></div>
     <div class="header__wrapper">
       <div class="header__container container">
         <div class="header__logo-wrapper">
@@ -30,7 +34,7 @@
               <a class="header__nav-link link" href="#">О проекте</a>
             </li>
             <li class="header__nav-item">
-              <button class="header__nav-link header__nav-link--secondary header__nav-link--programs link" type="submit">Программы</button>
+              <button class="header__nav-link header__nav-link--secondary header__nav-link--programs link" type="submit"><span>Программы</span></button>
               <ul class="header__nav-list-secondary header__nav-list-secondary--programs">
                 <li class="header__nav-item-secondary">
                   <a class="header__nav-link link" href="#">Стажировки</a>
@@ -53,7 +57,7 @@
               <a class="header__nav-link link" href="#">Отзывы</a>
             </li>
             <li class="header__nav-item">
-              <button class="header__nav-link header__nav-link--secondary header__nav-link--news link" type="submit">Новости</button>
+              <button class="header__nav-link header__nav-link--secondary header__nav-link--news link" type="submit"><span>Новости</span></button>
               <ul class="header__nav-list-secondary header__nav-list-secondary--news">
                 <li class="header__nav-item-secondary">
                   <a class="header__nav-link link" href="#">Интервью</a>
@@ -95,10 +99,12 @@
               </picture>
             </div>
             <div class="hero__wrapper">
-              <h2 class="hero__title">Глобальный профессиональный опыт обучения за рубежом</h2>
-              <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
-              <div class="hero__link-wrapper">
-                <a class="hero__link button" href="#"><span>Подробнее</span></a>
+              <h2 class="hero__title">Глобальный профессиональный опыт обучения за рубежом</h2>
+              <div class="hero__description-wrapper">
+                <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                <div class="hero__link-wrapper">
+                  <a class="hero__link button" href="#"><span>Подробнее</span></a>
+                </div>
               </div>
             </div>
           </div>
@@ -116,9 +122,11 @@
             </div>
             <div class="hero__wrapper">
               <h2 class="hero__title">Волонтёрские программы – внесите свой вклад в общество</h2>
-              <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-              <div class="hero__link-wrapper">
-                <a class="hero__link button" href="#"><span>Подробнее</span></a>
+              <div class="hero__description-wrapper">
+                <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                <div class="hero__link-wrapper">
+                  <a class="hero__link button" href="#"><span>Подробнее</span></a>
+                </div>
               </div>
             </div>
           </div>
@@ -126,19 +134,21 @@
           <div class="hero__item swiper-slide">
             <div class="hero__image-wrapper">
               <picture>
-                  <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-03.webp 2x">
-                  <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-03.webp 2x">
-                  <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-03.webp 2x">
-                  <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-03.jpg 2x">
-                  <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-03.jpg 2x">
-                  <img class="hero__image" src="img/hero/hero-mobile-03.jpg" width="320" height="568" alt="Девушка с книгой">
-                </picture>
+                <source media="(min-width: 1300px)" type="image/webp" width="1440" height="800" srcset="img/hero/hero-desktop-03.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" width="768" height="1024" srcset="img/hero/hero-tablet-03.webp 2x">
+                <source type="image/webp" width="320" height="568" srcset="img/hero/hero-mobile-03.webp 2x">
+                <source media="(min-width: 1300px)" type="image/jpg" width="1440" height="800" srcset="img/hero/hero-desktop-03.jpg 2x">
+                <source media="(min-width: 768px)" type="image/jpg" width="768" height="1024" srcset="img/hero/hero-tablet-03.jpg 2x">
+                <img class="hero__image" src="img/hero/hero-mobile-03.jpg" width="320" height="568" alt="Девушка с книгой">
+              </picture>
             </div>
             <div class="hero__wrapper">
               <h2 class="hero__title">Программы стажировок в крупнейших компаниях мира</h2>
-              <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-              <div class="hero__link-wrapper">
-                <a class="hero__link button" href="#"><span>Подробнее</span></a>
+              <div class="hero__description-wrapper">
+                <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                <div class="hero__link-wrapper">
+                  <a class="hero__link button" href="#"><span>Подробнее</span></a>
+                </div>
               </div>
             </div>
           </div>
@@ -320,7 +330,7 @@
         </div>
 
         <ul class="news__news-list">
-          <li class="news__news-item">
+          <li class="news__news-item news__news-item--01">
             <time class="news__news-time" datetime="2023-03-23">23/03/2023</time>
             <h3 class="news__news-title">Интервью
               с участницей
@@ -331,21 +341,21 @@
                 и как прошла 6-месячная
                 стажировка в ISOFound</a></p>
           </li>
-          <li class="news__news-item">
+          <li class="news__news-item news__news-item--02">
             <time class="news__news-time" datetime="2023-03-20">20/03/2023</time>
             <h3 class="news__news-title">Путешествуем
               по миру</h3>
             <p><a href="#">Какие места посещают
                 наши студенты весной</a></p>
           </li>
-          <li class="news__news-item">
+          <li class="news__news-item news__news-item--03">
             <time class="news__news-time" datetime="2023-03-17">17/03/2023</time>
             <h3 class="news__news-title">Новая программа
               волонтёрства</h3>
             <p><a href="#">Программа помощи детям
                 длительностью 4 месяца</a></p>
           </li>
-          <li class="news__news-item">
+          <li class="news__news-item news__news-item--04">
             <time class="news__news-time" datetime="2023-03-10">10/03/2023</time>
             <h3 class="news__news-title">Построй свою
               карьеру</h3>
@@ -673,7 +683,7 @@
       </div>
     </section>
 
-    <section class="form">
+    <section class="form" data-test="form">
       <div class="form__wrapper">
         <div class="form__inner">
           <h1 class="form__title">Напишите нам</h1>

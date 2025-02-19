@@ -58,7 +58,7 @@
   display: flex;
   flex-direction: column;
   background-color: $color-bg-accent;
-  width: 290px;
+  width: 300px;
   margin: 0 auto;
   border-radius: 16px;
   padding: 15px 15px 27px;
@@ -80,10 +80,10 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   margin: 0;
   color: $color-text-light;
-  margin-bottom: 10px;
+  margin-bottom: 9.5px;
 
   @media (width >= 652px) {
     font-size: 28px;
@@ -102,10 +102,11 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 20.5px;
   opacity: 0.9;
+  color: $color-text-light-alt;
 
   @media (width >= 652px) {
     font-size: 16px;
@@ -130,14 +131,14 @@
 .form__input-wrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .form__label {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   opacity: 0.8;
   margin-bottom: 12px;
 
@@ -151,7 +152,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  height: 50px;
+  height: 51px;
   border-radius: 8px;
   border: 1px solid #6e99d4;
   overflow: hidden;
@@ -170,7 +171,7 @@
 
 .form__input-container:has(.form__input--message) {
   height: unset;
-  min-height: 94px;
+  min-height: 95px;
 }
 
 .form__checkbox {
@@ -186,7 +187,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 
   @media (width >= 652px) {
     line-height: 12px;
@@ -203,7 +204,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .form__checkbox-container {
@@ -217,6 +218,7 @@
   width: 20px;
   height: 20px;
   flex-shrink: 0;
+  margin-top: -2px;
 
   &::after {
     position: absolute;
@@ -298,7 +300,7 @@
 
 .form__button {
   width: 260px;
-  height: 44px;
+  height: 43px;
   display: flex;
   padding-left: 21px;
   padding-right: 59px;
@@ -314,7 +316,7 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    right: 5px;
+    right: 4px;
     background-color: $color-bg-alt;
   }
 
@@ -324,7 +326,7 @@
     background-color: $color-button;
     width: 34px;
     height: 34px;
-    right: 5px;
+    right: 4px;
     mask-image: url("../../img/sprite/arror-tr.svg");
     mask-repeat: no-repeat;
     mask-position: center;
@@ -358,4 +360,42 @@
     mask-image: url("../../img/sprite/arror-r.svg");
     right: 4px;
   }
+}
+
+.form__input-container:has(.form__input--city) {
+  width: 260px;
+  height: 52px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: $color-bg-alt;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    mask-image: url("../../img/sprite/arrow-d.svg");
+    mask-size: 16px 16px;
+    mask-repeat: no-repeat;
+  }
+}
+
+.form__input--city {
+  appearance: none;
+}
+
+.form__input-wrapper:has(.form__checkbox-container) {
+  height: 42px;
+  margin-bottom: 19px;
+}
+
+.form__input-wrapper:has(.form__input--city) {
+  margin-bottom: 21px;
+}
+
+.form__input--message {
+  resize: none;
+  height: 100%;
 }

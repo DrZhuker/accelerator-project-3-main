@@ -1,16 +1,26 @@
 .header {
   display: flex;
-
   position: absolute;
   width: 100%;
-
-  // height: 100vw;
-
-  // z-index: 2;
+  z-index: 3;
 }
 
-.header--overlay {
-  background-color: $color-overlay-alt;
+.header__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-overlay-alt; /* Полупрозрачный черный фон */
+  z-index: 4; /* Убедитесь, что это ниже меню */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.header__overlay--active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .header__wrapper {
@@ -22,7 +32,11 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  z-index: 10;
+  z-index: 5;
+
+  @media (width >= 768px) {
+    top: 32px;
+  }
 }
 
 .header__container {
@@ -80,6 +94,11 @@
     mask-position: center;
     mask-size: 22px 22px;
     transition: transform 150ms ease-out;
+  }
+
+  @media (width >= 768px) {
+    margin-top: -1px;
+    width: 137px;
   }
 }
 
@@ -148,7 +167,7 @@
   position: absolute;
   top: 58px;
   right: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 28px;
   width: 290px;
@@ -180,15 +199,20 @@
 .header__nav-link {
   display: flex;
   opacity: 0.7;
-  width: fit-content;
+  width: 100%;
   padding: 0;
+}
+
+.header__nav-link span {
+  display: flex;
+  width: fit-content;
 }
 
 .header__nav-link:hover {
   opacity: 1;
 }
 
-.header__nav-link--secondary {
+.header__nav-link--secondary span {
   position: relative;
 
   &::after {

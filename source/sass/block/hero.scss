@@ -1,5 +1,4 @@
 .hero {
-  margin-top: 80px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,6 +19,10 @@
   @media (width >= 768px) {
     height: 1024px;
   }
+
+  @media (width >= 1440px) {
+    height: 800px;
+  }
 }
 
 .hero__image-wrapper {
@@ -33,6 +36,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  user-select: none;
 }
 
 .hero__wrapper {
@@ -40,9 +44,16 @@
   padding: 20px 15px;
   z-index: 2;
   border-radius: 10px;
+  margin: 0 auto;
 
   @media (width >= 768px) {
     width: 768px;
+    padding: 45px 64px 60px 45px;
+  }
+
+  @media (width >= 1440px) {
+    width: 1440px;
+    padding: 100px 370px 60px 100px;
   }
 }
 
@@ -58,12 +69,27 @@
   background-color: $color-bg-alt;
   border-radius: 0 16px 16px 0;
   padding: 20px 16px 15px 14px;
+  user-select: none;
 
   @media (width >= 768px) {
-    padding: 30px 69px 24px 40px;
+    padding: 31px 40px 23px;
     font-size: 36px;
     line-height: 44px;
     border-radius: 0 30px 30px 0;
+  }
+
+  @media (width >= 1440px) {
+    font-size: 54px;
+    line-height: 62px;
+  }
+}
+
+.hero__description-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (width >= 768px) {
+    flex-direction: row;
   }
 }
 
@@ -80,6 +106,7 @@
   padding: 0 14px 15px;
   border-radius: 0 0 16px;
   position: relative;
+  user-select: none;
 
   &::before {
     position: absolute;
@@ -88,6 +115,8 @@
     height: 10px;
     background-image: url("../../img/sprite/ugol-p.svg");
     background-size: 8px 10px;
+    background-repeat: no-repeat;
+    background-position: top left;
     right: -8px;
   }
 
@@ -100,9 +129,14 @@
     border-radius: 0 0 0 30px;
 
     &::before {
-      position: absolute;
       content: none;
     }
+  }
+
+  @media (width >= 1440px) {
+    width: 526px;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 
@@ -125,6 +159,22 @@
     right: -10px;
     top: 0;
   }
+
+  @media (width >= 768px) {
+    border-radius: 0 0 30px;
+    padding: 0 40px 0 0;
+
+    &::before {
+      width: 26px;
+      height: 26px;
+      right: -26px;
+      background-size: 26px 26px;
+    }
+  }
+
+  @media (width >= 1440px) {
+    padding: 10px 50px 0 0;
+  }
 }
 
 .hero__link {
@@ -136,6 +186,13 @@
   align-items: center;
   text-decoration: none;
   position: relative;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.24px;
+  text-align: center;
+  user-select: none;
+
 
   &::before {
     position: absolute;
@@ -143,7 +200,7 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    right: 5px;
+    right: 4px;
     background-color: $color-button;
   }
 
@@ -153,11 +210,37 @@
     background-color: $color-bg-alt;
     width: 34px;
     height: 34px;
-    right: 5px;
+    right: 4px;
     mask-image: url("../../img/sprite/arror-tr.svg");
     mask-repeat: no-repeat;
     mask-position: center;
     transition: all 150ms ease;
+  }
+
+
+  @media (width >= 768px) {
+    width: 198px;
+    height: 56px;
+    padding-left: 31px;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+
+
+    &::before {
+      width: 46px;
+      height: 46px;
+    }
+
+    &::after {
+      width: 46px;
+      height: 46px;
+    }
+
+    @media (width >= 1440px) {
+      width: 199px;
+      height: 58px;
+    }
   }
 }
 
@@ -203,14 +286,35 @@
     width: 10px;
     height: 10px;
     background-image: url("../../img/sprite/ugol-pag.svg");
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
     right: -10px;
     bottom: 0;
   }
+
+  @media (width >= 768px) {
+    left: calc(((100% - 678px) / 2));
+    width: 100px;
+    height: 40px;
+    border-radius: 20px 20px 0 0;
+
+    &::after {
+      width: 26px;
+      height: 26px;
+      background-size: 26px 26px;
+      right: -26px;
+      bottom: 0;
+    }
+  }
+
+  @media (width >= 1440px) {
+    left: calc(((100% - 1240px) / 2));
+  }
 }
 
-.hero__pagination-button {
+.hero .hero__pagination-button {
   display: flex;
-  width: 20px;
+  width: 12px;
   height: 20px;
   padding: 0;
   background-color: unset;
@@ -218,31 +322,42 @@
   border: none;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  margin: 0;
+
+  @media (width >= 768px) {
+    width: 16px;
+  }
 
   cursor: pointer;
   z-index: 2;
 }
 
-.hero__pagination-button-span {
+.hero .hero__pagination-button-span {
   display: flex;
   width: 8px;
   height: 8px;
   border: 2px solid $color-button;
   border-radius: 50%;
+
+  @media (width >= 768px) {
+    width: 12px;
+    height: 12px;
+  }
 }
 
-.hero__pagination-button:hover .hero__pagination-button-span {
+.hero .hero__pagination-button:hover .hero__pagination-button-span {
   background-color: $color-button;
   opacity: 0.7;
   border: 2px solid #ffffff;
 }
 
-.hero__pagination-button:focus .hero__pagination-button-span {
+.hero .hero__pagination-button:focus .hero__pagination-button-span {
   background-color: $color-button;
   border: none;
 }
 
-.hero__pagination-button--active .hero__pagination-button-span {
+.hero .swiper-pagination-bullet-active .hero__pagination-button-span {
   background-color: $color-button-active;
   border: 2px solid $color-button-active;
 }

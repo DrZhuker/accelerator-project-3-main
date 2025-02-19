@@ -1,7 +1,7 @@
 .reviews {
   display: flex;
   width: 320px;
-  padding-top: 50px;
+  padding-top: 55px;
   padding-bottom: 50px;
   margin: 0 auto;
   overflow: visible;
@@ -35,7 +35,7 @@
 .reviews__swiper.swiper {
   display: grid;
   grid-template-columns: 205px 1fr;
-  gap: 30px;
+  gap: 33px;
   overflow: hidden;
 
   @media (width >= 768px) {
@@ -59,8 +59,8 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 290px;
-  border-radius: 12px;
-  padding: 32px 17px;
+  border-radius: 16px;
+  padding: 30px 15px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

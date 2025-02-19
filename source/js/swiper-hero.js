@@ -1,70 +1,93 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 
-const heroSwiper = new Swiper('.hero__slider', {
-  modules: [Pagination, Navigation],
-  slidesPerView: 1,
-  spaceBetween: 0,
-  loop: false, // Отключаем свайпы
-  pagination: {
-    el: '.hero__pagination',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return `<button class="hero__pagination-button ${className}" data-index="${index}" type="button">
-                <span class="hero__pagination-button-span"></span>
-                <span class="visually-hidden">${index + 1}</span>
-              </button>`;
+let heroSwiper;
+
+function createSwiper() {
+  heroSwiper = new Swiper('.hero__slider', {
+    modules: [Pagination, Navigation, EffectFade],
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    slidesPerView: 1,
+    loop: true, // Устанавливаем loop в true для бесконечного слайдера
+    pagination: {
+      el: '.hero__pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return `<button class="hero__pagination-button ${className}" data-index="${index}" type="button">
+                  <span class="hero__pagination-button-span"></span>
+                  <span class="visually-hidden">${index + 1}</span>
+                </button>`;
+      }
+    },
+    allowTouchMove: window.innerWidth < 1440, // Отключаем перетаскивание при ширине экрана 1440px и больше
+  });
+
+  // Функция для обновления позиции пагинации
+  function updatePaginationPosition() {
+    const hero = document.querySelector('.hero');
+    const activeSlide = document.querySelector('.swiper-slide-active .hero__title');
+    const pagination = document.querySelector('.hero__pagination');
+
+    if (!hero || !activeSlide || !pagination) {
+      return;
+    }
+
+    const heroRect = hero.getBoundingClientRect();
+    const titleRect = activeSlide.getBoundingClientRect();
+    const titleTransformY = parseFloat(getComputedStyle(activeSlide).transform.split(',')[5]) || 0;
+    const newTop = titleRect.top - heroRect.top - pagination.offsetHeight + titleTransformY;
+
+    if (newTop >= 0) {
+      pagination.style.position = 'absolute';
+      pagination.style.top = `${newTop + 2}px`;
     }
   }
-});
 
-// Функция для обновления позиции пагинации
-function updatePaginationPosition() {
-  const hero = document.querySelector('.hero');
-  const title = document.querySelector('.hero__title');
-  const pagination = document.querySelector('.hero__pagination');
+  // Обновляем позицию после смены слайда
+  heroSwiper.on('slideChange', () => {
+    requestAnimationFrame(() => {
+      updatePaginationPosition();
+    });
+  });
 
-  if (!hero || !title || !pagination) {
-    return;
-  }
+  // Обновляем позицию при инициализации слайдера
+  heroSwiper.on('init', () => {
+    updatePaginationPosition();
+  });
 
-  // Получаем координаты hero и title относительно окна
-  const heroRect = hero.getBoundingClientRect();
-  const titleRect = title.getBoundingClientRect();
+  // Слушатель изменения размера окна
+  window.addEventListener('resize', () => {
+    const isTouchMoveAllowed = window.innerWidth < 1440;
 
-  console.log('heroRect.top:', heroRect.top); // Позиция hero
-  console.log('titleRect.top:', titleRect.top); // Позиция title
+    // Запоминаем индекс активного слайда перед уничтожением слайдера
+    const activeSlideIndex = heroSwiper.realIndex;
 
-  // Вычисляем корректировку по transform для title (если оно используется)
-  const titleTransformY = parseFloat(window.getComputedStyle(title).transform.split(',')[5]) || 0;
-  console.log('titleTransformY:', titleTransformY);
+    // Если текущая ширина экрана отличается от той, на которой мы инициализировали слайдер, перезапускаем слайдер
+    if ((isTouchMoveAllowed && !heroSwiper.params.allowTouchMove) || (!isTouchMoveAllowed && heroSwiper.params.allowTouchMove)) {
+      heroSwiper.destroy(true, true); // Уничтожаем текущий слайдер
+      createSwiper(); // Перезапускаем слайдер с новыми параметрами
 
-  // Рассчитываем позицию top для пагинации, чтобы она была непосредственно над заголовком
-  const newTop = titleRect.top - heroRect.top - pagination.offsetHeight + titleTransformY;
+      // Восстанавливаем активный слайд после перезапуска
+      heroSwiper.slideTo(activeSlideIndex); // Устанавливаем тот же активный слайд
+    }
 
-  console.log('newTop calculated:', newTop);
+    // Пересчитываем позицию пагинации при изменении размера
+    requestAnimationFrame(() => {
+      updatePaginationPosition();
+    });
+  });
 
-  // Устанавливаем новую позицию для пагинации
-  if (newTop >= 0) {
-    pagination.style.position = 'absolute';
-    pagination.style.top = `${newTop}px`;
-    console.log(`✅ Пагинация обновлена: top = ${newTop}px`);
-  } else {
-    console.warn(`⚠️ Ошибка расчета: top = ${newTop}px`);
-  }
+  // Инициализация слайдера
+  heroSwiper.init();
+
+  // Обновление позиции пагинации на старте, после инициализации
+  requestAnimationFrame(() => {
+    updatePaginationPosition();
+  });
 }
 
-// Обновляем позицию при смене слайда
-heroSwiper.on('slideChange', () => {
-  console.log('Слайд изменен. Пересчитываем позицию пагинации.');
-  updatePaginationPosition();
-});
-
-// Обновляем позицию при инициализации слайдера
-heroSwiper.on('init', () => {
-  console.log('Инициализация слайдера. Пересчитываем позицию пагинации.');
-  updatePaginationPosition();
-});
-
-// Инициализация слайдера
-heroSwiper.init();
+// Инициализируем слайдер
+createSwiper();

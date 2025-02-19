@@ -19,11 +19,13 @@
 
 .faq__title {
   margin: 0;
+  margin-left: -2px;
+  overflow: hidden;
   margin-bottom: 30px;
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: center;
   color: $color-text-alt;
 
@@ -46,13 +48,13 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 11px;
 }
 
 .faq__item {
   display: flex;
   flex-direction: column;
-  padding: 22px 15px;
+  padding: 23px 15px 21px;
   border: 2px solid $color-button;
   border-radius: 14px;
   cursor: pointer;
@@ -64,6 +66,14 @@
   @media (width >= 1028px) {
     padding: 45px 42px;
   }
+}
+
+.faq__list li:nth-child(4) {
+  padding: 20px 15px;
+}
+
+.faq__list li:nth-child(5) {
+  padding: 20px 15px;
 }
 
 .faq__item:hover {
@@ -78,11 +88,11 @@
 }
 
 .faq__item-title {
-  padding-right: 70px;
+  padding-right: 68px;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   color: $color-text-alt;
   margin: 0;
   display: flex;
@@ -159,8 +169,9 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   margin: 0;
+  color: $color-text-light-alt;
 
   @media (width >= 768px) {
     font-size: 16px;
@@ -174,7 +185,6 @@
 
 .faq__item--active {
   background-color: $color-bg-accent;
-  color: $color-text-light;
 }
 
 .faq__item--active:hover {
@@ -193,7 +203,8 @@
 
 .faq__item--active p {
   max-height: 200px;
-  margin-top: 20px;
+  margin-top: 21px;
+  margin-bottom: -1px;
 }
 
 .faq__item--active .faq__button {

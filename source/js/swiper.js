@@ -13,6 +13,8 @@ export function initSwiper() {
 
   const swiper = new Swiper(swiperContainer, {
     modules: [Navigation, Pagination],
+    observer: true, // Следит за изменениями DOM
+    observeParents: true, // Следит за изменениями родительских элементов
     navigation: {
       nextEl: '.programs__swiper-button--next',
       prevEl: '.programs__swiper-button--prev',
@@ -26,9 +28,9 @@ export function initSwiper() {
     slidesOffsetBefore: 15,
     breakpoints: {
       768: {
-        slidesPerView: 2,
-        spaceBetween: 24,
-        slidesOffsetBefore: 0,
+        slidesPerView: 2.25,
+        spaceBetween: 30,
+        slidesOffsetBefore: 45,
       },
       1440: {
         slidesPerView: 3,
@@ -58,12 +60,14 @@ export function initSwiper() {
 
 // Функция для обновления состояния кнопок
 function updateNavigation(swiper) {
-  const prevButton = document.querySelector('.programs__swiper-button-prev');
-  const nextButton = document.querySelector('.programs__swiper-button-next');
+  const prevButton = document.querySelector('.programs__swiper-button--prev');
+  const nextButton = document.querySelector('.programs__swiper-button--next');
 
   if (!prevButton || !nextButton) {
     return;
   }
+  prevButton.toggleAttribute('disabled', swiper.isBeginning);
+  nextButton.toggleAttribute('disabled', swiper.isEnd);
 
   // Количество всех слайдов
   const totalSlides = swiper.slides.length;

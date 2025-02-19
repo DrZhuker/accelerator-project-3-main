@@ -1,13 +1,14 @@
 .programs {
   display: flex;
   width: 320px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 56px;
+  padding-bottom: 49px;
   margin: 0 auto;
   overflow: visible;
 
   @media (width >= 768px) {
-    width: 678px;
+    width: 768px;
+    padding-top: 53px;
   }
 
   @media (width >= 1440px) {
@@ -19,13 +20,15 @@
   display: grid;
   grid-template-columns: 205px 1fr;
   gap: 30px;
-  overflow: hidden;
+
+  // overflow: hidden;
 
   @media (width >= 768px) {
     grid-template-columns: 1fr 234px;
     column-gap: 0;
+    row-gap: 39px;
 
-    // overflow: visible;
+    overflow: visible;
   }
 
   @media (width >= 1440px) {
@@ -43,11 +46,12 @@
   color: $color-text-alt;
   margin: 0;
   margin-left: 15px;
+  margin-bottom: 4px;
 
   @media (width >= 768px) {
-    margin-left: 0;
     font-size: 34px;
     line-height: 50px;
+    margin-left: 45px;
   }
 
   @media (width >= 1440px) {
@@ -60,7 +64,7 @@
   grid-row: 3/4;
   display: flex;
   position: relative;
-  padding: 16px 21px;
+  padding: 15px 31px;
   width: 205px;
   font-weight: 500;
   font-size: 12px;
@@ -76,7 +80,7 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    right: 5px;
+    right: 4px;
     top: 50%;
     transform: translateY(-50%);
     background-color: $color-button;
@@ -88,7 +92,7 @@
     background-color: $color-bg-alt;
     width: 34px;
     height: 34px;
-    right: 5px;
+    right: 4px;
     top: 50%;
     transform: translateY(-50%);
     mask-image: url("../../img/sprite/arror-tr.svg");
@@ -100,14 +104,15 @@
   @media (width >= 768px) {
     grid-column: 2/3;
     grid-row: 1/2;
-    padding: 21px 31px;
+    padding: 20px 31px;
     width: 234px;
     height: 56px;
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.28px;
-    margin-left: 0;
-    margin-right: 45px;
+    margin-left: -45px;
+    margin-right: 0;
+    margin-top: -3px;
 
     &::before {
       width: 46px;
@@ -150,6 +155,12 @@
   display: flex;
 }
 
+.programs__swiper-slider.swiper-slide {
+  @media (width >= 768px) {
+    width: 324px;
+  }
+}
+
 .programs__slider {
   display: flex;
   flex-direction: column;
@@ -165,6 +176,9 @@
 
   @media (width >= 768px) {
     width: 324px;
+    height: 420px;
+    padding-bottom: 10px;
+    padding-left: 20px;
   }
 
   @media (width >= 1440px) {
@@ -181,7 +195,7 @@
   letter-spacing: 0%;
   color: $color-text-alt;
   margin: 0;
-  padding: 18px 35px 6px 18px;
+  padding: 19px 35px 6px 18px;
   background-color: $color-bg-alt;
   width: fit-content;
   border-radius: 12px 12px 0 0;
@@ -201,6 +215,8 @@
   @media (width >= 768px) {
     font-size: 20px;
     line-height: 14px;
+    min-width: 173px;
+    padding-right: 18px;
   }
 
   @media (width >= 1440px) {
@@ -222,7 +238,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  letter-spacing: 0%;
+  letter-spacing: -0.01px;
 
   &::before {
     position: absolute;
@@ -231,7 +247,7 @@
     height: 30px;
     border-radius: 50%;
     right: 18px;
-    top: 50%;
+    top: 48%;
     transform: translateY(-50%);
     background-color: $color-button;
   }
@@ -243,7 +259,7 @@
     width: 30px;
     height: 30px;
     right: 18px;
-    top: 50%;
+    top: 48%;
     transform: translateY(-50%);
     mask-image: url("../../img/sprite/arror-tr.svg");
     mask-repeat: no-repeat;
@@ -252,6 +268,8 @@
   }
 
   @media (width >= 768px) {
+    width: 284px;
+    padding-right: 70px;
     font-size: 14px;
     line-height: 20px;
   }
@@ -320,6 +338,7 @@
   position: relative;
   width: 52px;
   margin-right: 15px;
+  margin-top: -2px;
   justify-self: flex-end;
 
   @media (width >= 768px) {
@@ -327,6 +346,8 @@
     grid-row: 3/4;
     z-index: 10;
     height: 22px;
+    margin-right: 45px;
+    margin-top: 0;
   }
 }
 
@@ -403,6 +424,8 @@
 
   @media (width >= 768px) {
     display: flex;
+    margin-left: 45px;
+    margin-top: 3px;
   }
 }
 
