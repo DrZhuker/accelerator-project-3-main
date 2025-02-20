@@ -55,6 +55,7 @@
   @media (width >= 1440px) {
     font-size: 50px;
     line-height: 50px;
+    margin-bottom: 30px;
   }
 }
 
@@ -99,6 +100,7 @@
   @media (width >= 1440px) {
     font-size: 32px;
     line-height: 36px;
+    margin-bottom: 40px;
   }
 }
 
@@ -107,13 +109,12 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   margin-bottom: 30px;
 
   @media (width >= 768px) {
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0%;
     margin-bottom: 40px;
     max-width: 500px;
   }
@@ -121,6 +122,7 @@
   @media (width >= 1440px) {
     font-size: 16px;
     line-height: 26px;
+    margin-bottom: 50px;
   }
 }
 
@@ -226,7 +228,7 @@
   }
 
   @media (width >= 1440px) {
-    padding: 50px 100px;
+    padding-left: 120px;
   }
 }
 
@@ -270,9 +272,11 @@
   @media (width >= 1440px) {
     width: 484px;
     flex-direction: row;
-    padding: 51px 41px;
+    padding: 30px 40px;
+    padding-right: 48px;
     justify-content: space-between;
     align-items: center;
+    gap: 0;
   }
 }
 
@@ -303,7 +307,7 @@
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   color: $color-text-light-alt;
   margin: 0;
   padding: 0;
@@ -316,7 +320,6 @@
   @media (width >= 1440px) {
     font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0%;
     max-width: 193px;
   }
 }

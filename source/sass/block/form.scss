@@ -67,7 +67,7 @@
     width: 442px;
     margin: 0;
     border-radius: 0;
-    padding: 30px 40px 52px;
+    padding: 41px 40px 35px;
   }
 
   @media (width >= 1440px) {
@@ -132,6 +132,10 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 19px;
+
+  @media (width >= 652px) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__label {
@@ -156,6 +160,11 @@
   border-radius: 8px;
   border: 1px solid #6e99d4;
   overflow: hidden;
+
+
+  @media (width >= 652px) {
+    height: 50px;
+  }
 }
 
 .form__input {
@@ -172,6 +181,11 @@
 .form__input-container:has(.form__input--message) {
   height: unset;
   min-height: 95px;
+
+
+  @media (width >= 652px) {
+    min-height: 88px;
+  }
 }
 
 .form__checkbox {
@@ -336,6 +350,22 @@
   @media (width >= 652px) {
     width: 352px;
     height: 56px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+    text-align: center;
+    padding-left: 9px;
+
+    &::before {
+      width: 46px;
+      height: 46px;
+    }
+
+    &::after {
+      width: 46px;
+      height: 46px;
+    }
   }
 }
 
@@ -380,6 +410,11 @@
     mask-size: 16px 16px;
     mask-repeat: no-repeat;
   }
+
+
+  @media (width >= 652px) {
+    width: 362px;
+  }
 }
 
 .form__input--city {
@@ -389,10 +424,20 @@
 .form__input-wrapper:has(.form__checkbox-container) {
   height: 42px;
   margin-bottom: 19px;
+
+
+  @media (width >= 652px) {
+    margin-bottom: 13px;
+  }
 }
 
 .form__input-wrapper:has(.form__input--city) {
   margin-bottom: 21px;
+
+
+  @media (width >= 652px) {
+    margin-bottom: 25px;
+  }
 }
 
 .form__input--message {
