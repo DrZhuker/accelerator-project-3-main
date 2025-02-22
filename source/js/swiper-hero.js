@@ -11,7 +11,7 @@ function createSwiper() {
       crossFade: true,
     },
     slidesPerView: 1,
-    loop: true, // Устанавливаем loop в true для бесконечного слайдера
+    loop: true,
     pagination: {
       el: '.hero__pagination',
       clickable: true,
@@ -22,10 +22,9 @@ function createSwiper() {
                 </button>`;
       }
     },
-    allowTouchMove: window.innerWidth < 1440, // Отключаем перетаскивание при ширине экрана 1440px и больше
+    allowTouchMove: window.innerWidth < 1440,
   });
 
-  // Функция для обновления позиции пагинации
   function updatePaginationPosition() {
     const hero = document.querySelector('.hero');
     const activeSlide = document.querySelector('.swiper-slide-active .hero__title');
@@ -46,48 +45,38 @@ function createSwiper() {
     }
   }
 
-  // Обновляем позицию после смены слайда
   heroSwiper.on('slideChange', () => {
     requestAnimationFrame(() => {
       updatePaginationPosition();
     });
   });
 
-  // Обновляем позицию при инициализации слайдера
   heroSwiper.on('init', () => {
     updatePaginationPosition();
   });
 
-  // Слушатель изменения размера окна
   window.addEventListener('resize', () => {
     const isTouchMoveAllowed = window.innerWidth < 1440;
 
-    // Запоминаем индекс активного слайда перед уничтожением слайдера
     const activeSlideIndex = heroSwiper.realIndex;
 
-    // Если текущая ширина экрана отличается от той, на которой мы инициализировали слайдер, перезапускаем слайдер
     if ((isTouchMoveAllowed && !heroSwiper.params.allowTouchMove) || (!isTouchMoveAllowed && heroSwiper.params.allowTouchMove)) {
-      heroSwiper.destroy(true, true); // Уничтожаем текущий слайдер
-      createSwiper(); // Перезапускаем слайдер с новыми параметрами
+      heroSwiper.destroy(true, true);
+      createSwiper();
 
-      // Восстанавливаем активный слайд после перезапуска
-      heroSwiper.slideTo(activeSlideIndex); // Устанавливаем тот же активный слайд
+      heroSwiper.slideTo(activeSlideIndex);
     }
 
-    // Пересчитываем позицию пагинации при изменении размера
     requestAnimationFrame(() => {
       updatePaginationPosition();
     });
   });
 
-  // Инициализация слайдера
   heroSwiper.init();
 
-  // Обновление позиции пагинации на старте, после инициализации
   requestAnimationFrame(() => {
     updatePaginationPosition();
   });
 }
 
-// Инициализируем слайдер
 createSwiper();

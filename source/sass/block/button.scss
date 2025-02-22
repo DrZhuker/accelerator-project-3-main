@@ -18,6 +18,8 @@
   color: $color-text-alt;
   text-transform: uppercase;
   cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .button p {

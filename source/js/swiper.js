@@ -36,21 +36,21 @@ export function initSwiper() {
         slidesPerView: 3,
         spaceBetween: 32,
         slidesOffsetBefore: 0,
+        allowTouchMove: false,
+        simulateTouch: false,
       },
     },
   });
 
-  // Обновляем кнопки и скроллбар после инициализации
+
   updateNavigation(swiper);
   updateScrollbar(swiper);
 
-  // Следим за завершением смены слайда
   swiper.on('slideChangeTransitionEnd', () => {
     updateNavigation(swiper);
     updateScrollbar(swiper);
   });
 
-  // Следим за изменением размера окна
   window.addEventListener('resize', () => {
     updateScrollbar(swiper);
   });
@@ -58,7 +58,6 @@ export function initSwiper() {
   return swiper;
 }
 
-// Функция для обновления состояния кнопок
 function updateNavigation(swiper) {
   const prevButton = document.querySelector('.programs__swiper-button--prev');
   const nextButton = document.querySelector('.programs__swiper-button--next');
@@ -69,18 +68,14 @@ function updateNavigation(swiper) {
   prevButton.toggleAttribute('disabled', swiper.isBeginning);
   nextButton.toggleAttribute('disabled', swiper.isEnd);
 
-  // Количество всех слайдов
   const totalSlides = swiper.slides.length;
-  // Количество видимых слайдов
   const visibleSlides = Math.floor(swiper.params.slidesPerView);
-  // Индекс последнего возможного слайда, который можно показать
   const lastPossibleIndex = totalSlides - visibleSlides;
 
   prevButton.toggleAttribute('disabled', swiper.activeIndex === 0);
   nextButton.toggleAttribute('disabled', swiper.activeIndex >= lastPossibleIndex);
 }
 
-// Функция для обновления положения скроллбара
 function updateScrollbar(swiper) {
   const scrollbar = document.querySelector('.programs__swiper-scrollbar');
   const scrollButton = document.querySelector('.programs__swiper-scroll-button');
@@ -89,26 +84,18 @@ function updateScrollbar(swiper) {
     return;
   }
 
-  // Количество всех слайдов
   const totalSlides = swiper.slides.length;
-  // Количество видимых слайдов
   const visibleSlides = Math.floor(swiper.params.slidesPerView);
 
-  // Ширина скроллбара в зависимости от ширины экрана
-  const scrollbarWidth = window.innerWidth >= 1440 ? 1136 : 562; // 1440px и 768px+
+  const scrollbarWidth = window.innerWidth >= 1440 ? 1136 : 562;
 
-  // Ширина кнопки скроллбара пропорциональна количеству слайдов, которое видно
   const buttonWidth = (visibleSlides / totalSlides) * scrollbarWidth;
 
   scrollButton.style.width = `${buttonWidth}px`;
 
-  // Максимальное смещение скроллбара
   const maxTranslate = scrollbarWidth - buttonWidth;
-  // Прогресс скролла
   const progress = swiper.activeIndex / (totalSlides - visibleSlides);
-  // Смещение кнопки скроллбар на основе прогресса
   const translateX = maxTranslate * progress;
 
-  // Применяем смещение
   scrollButton.style.transform = `translateX(${translateX}px)`;
 }

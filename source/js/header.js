@@ -10,49 +10,38 @@ export function initHeader() {
   let scrollbarWidth = 0;
   let headerWidth = 0;
 
-  // Устанавливаем глобальное ограничение на горизонтальный скролл
-  html.style.overflowX = 'hidden'; // Блокируем горизонтальную прокрутку на всю страницу
-  body.style.overflowX = 'hidden'; // Блокируем горизонтальную прокрутку на body
+  html.style.overflowX = 'hidden';
+  body.style.overflowX = 'hidden';
 
   function toggleMenu(open) {
     if (open) {
-      // Сохраняем текущую прокрутку страницы и ширину полосы прокрутки
       scrollY = window.scrollY;
       scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-      headerWidth = header.offsetWidth; // Сохраняем текущую ширину хедера
+      headerWidth = header.offsetWidth;
 
-      // Блокируем вертикальную прокрутку
-      body.style.position = 'fixed'; // Зафиксировать body
-      body.style.top = `-${scrollY}px`; // Сохраняем текущую позицию
+      body.style.position = 'fixed';
+      body.style.top = `-${scrollY}px`;
       body.style.left = '0';
       body.style.right = '0';
       body.style.width = '100%';
+      body.style.overflow = 'hidden';
 
-      body.style.overflow = 'hidden'; // Блокируем вертикальную прокрутку
+      body.style.paddingRight = `${scrollbarWidth}px`;
 
-      // Компенсируем исчезновение вертикальной полосы прокрутки
-      body.style.paddingRight = `${scrollbarWidth}px`; // Добавляем отступ, чтобы избежать "прыжка"
-
-      // Устанавливаем фиксированную ширину хедера
-      header.style.position = 'fixed'; // Делаем хедер фиксированным
-      header.style.width = `${headerWidth}px`; // Фиксируем ширину хедера
-
+      header.style.position = 'fixed';
+      header.style.width = `${headerWidth}px`;
     } else {
-      // Восстанавливаем прокрутку
-      body.style.position = ''; // Восстанавливаем нормальное поведение body
+      body.style.position = '';
       body.style.top = '';
       body.style.left = '';
       body.style.right = '';
       body.style.width = '';
-      body.style.overflow = ''; // Разрешаем прокрутку
+      body.style.overflow = '';
+      body.style.paddingRight = '';
 
-      body.style.paddingRight = ''; // Убираем отступ
+      header.style.position = '';
+      header.style.width = '';
 
-      // Восстанавливаем хедер в исходное состояние
-      header.style.position = ''; // Возвращаем позицию хедера
-      header.style.width = ''; // Возвращаем оригинальную ширину хедера
-
-      // Возвращаем на исходную позицию
       window.scrollTo(0, scrollY);
     }
   }
@@ -66,8 +55,11 @@ export function initHeader() {
   });
 
   document.addEventListener('click', (event) => {
-    // Проверяем, что клик произошел вне меню и оно открыто
-    if (!nav.contains(event.target) && !menuButton.contains(event.target) && nav.classList.contains('header__nav--open')) {
+    if (
+      !nav.contains(event.target) &&
+      !menuButton.contains(event.target) &&
+      nav.classList.contains('header__nav--open')
+    ) {
       nav.classList.remove('header__nav--open');
       menuButton.classList.remove('button--alt');
       overlay.classList.remove('header__overlay--active');
@@ -76,13 +68,30 @@ export function initHeader() {
   });
 
   document.addEventListener('keydown', (event) => {
-    // Проверяем, что клавиша Escape была нажата и меню открыто
     if (event.key === 'Escape' && nav.classList.contains('header__nav--open')) {
       nav.classList.remove('header__nav--open');
       menuButton.classList.remove('button--alt');
       overlay.classList.remove('header__overlay--active');
       toggleMenu(false);
     }
+  });
+
+  document.querySelectorAll('.header__nav-link[href^="#"]').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const targetId = link.getAttribute('href').slice(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        nav.classList.remove('header__nav--open');
+        menuButton.classList.remove('button--alt');
+        overlay.classList.remove('header__overlay--active');
+        toggleMenu(false);
+
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
 }
 

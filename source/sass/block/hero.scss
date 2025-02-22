@@ -194,6 +194,7 @@
   letter-spacing: 0.24px;
   text-align: center;
   user-select: none;
+  z-index: 4;
 
 
   &::before {
@@ -219,7 +220,6 @@
     transition: all 150ms ease;
   }
 
-
   @media (width >= 768px) {
     width: 198px;
     height: 56px;
@@ -227,7 +227,6 @@
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.28px;
-
 
     &::before {
       width: 46px;
@@ -247,6 +246,8 @@
 }
 
 .hero__link:hover {
+  color: $color-text-light;
+
   &::before {
     background-color: $color-bg-alt;
   }
@@ -271,7 +272,7 @@
 
 .hero .hero__pagination.hero__pagination {
   position: absolute;
-  top: 202px; /* Здесь будет корректируемая позиция */
+  top: 202px;
   left: calc(((100% - 290px) / 2));
   display: flex;
   justify-content: center;

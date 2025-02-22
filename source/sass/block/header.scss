@@ -11,8 +11,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $color-overlay-alt; /* Полупрозрачный черный фон */
-  z-index: 4; /* Убедитесь, что это ниже меню */
+  background-color: $color-overlay-alt;
+  z-index: 4;
   visibility: hidden;
   opacity: 0;
   transition: opacity 300ms ease;
@@ -131,6 +131,7 @@
 }
 
 .header__menu-button .header__menu-text {
+  display: flex;
   padding-left: 21px;
   padding-right: 71px;
 }
@@ -139,6 +140,7 @@
   width: 290px;
   background-color: $color-button;
   color: $color-button-light;
+  border: 1px solid rgba(0, 0, 0, 0);
 
   &::before {
     background-color: $color-button-light;
@@ -154,11 +156,11 @@
   border: 1px solid $color-button;
 
   &::before {
-    background-color: $color-button;
+    background-color: $color-button-light;
   }
 
   &::after {
-    background-color: $color-button-light;
+    background-color: $color-button;
     mask-image: url("../../img/sprite/cross.svg");
   }
 }

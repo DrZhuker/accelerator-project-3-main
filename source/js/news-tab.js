@@ -5,20 +5,19 @@ export function initNewsTabScroll() {
     return;
   }
 
-  // Прокрутка колесиком мыши
+
   tabWrapper.addEventListener('wheel', (event) => {
-    event.preventDefault(); // Отменяем стандартный скролл страницы
-    tabWrapper.scrollLeft += event.deltaY; // Горизонтальный скролл
+    event.preventDefault();
+    tabWrapper.scrollLeft += event.deltaY;
   });
 
-  // Прокрутка при зажатой кнопке мыши (drag)
   let isDown = false;
   let startX;
   let scrollLeft;
 
   tabWrapper.addEventListener('mousedown', (event) => {
     isDown = true;
-    tabWrapper.classList.add('grabbing'); // Добавляем класс для смены курсора
+    tabWrapper.classList.add('grabbing');
     startX = event.pageX - tabWrapper.offsetLeft;
     scrollLeft = tabWrapper.scrollLeft;
   });
@@ -39,7 +38,7 @@ export function initNewsTabScroll() {
     }
     event.preventDefault();
     const x = event.pageX - tabWrapper.offsetLeft;
-    const walk = (x - startX) * 2; // Ускоряем скролл
+    const walk = (x - startX) * 2;
     tabWrapper.scrollLeft = scrollLeft - walk;
   });
 }

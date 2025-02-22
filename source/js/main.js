@@ -19,10 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 import { initReviewsSwiper } from './swiper-reviews';
 
-// Инициализация слайдера отзывов
 initReviewsSwiper();
 
 
 import './accordeon.js';
 
 import './swiper-hero.js';
+import { initPopup } from './popup.js';
+
+initPopup();
+import { initFormValidation } from './form.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  initFormValidation();
+});

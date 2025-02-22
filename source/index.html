@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Internship</title>
-  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
-  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="MyWebSite">
+  <link rel="manifest" href="favicon/site.webmanifest">
   <link rel="preload" href="../../fonts/manrope/Manrope-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="../../fonts/manrope/Manrope-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="../../fonts/manrope/Manrope-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -27,54 +27,54 @@
         </div>
         <nav class="header__nav">
           <button class="header__menu-button button" type="button">
-            <p class="header__menu-text">Меню</p>
+            <span class="header__menu-text">Меню</span>
           </button>
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a class="header__nav-link link" href="#">О проекте</a>
+              <a class="header__nav-link link" href="#about">О проекте</a>
             </li>
             <li class="header__nav-item">
               <button class="header__nav-link header__nav-link--secondary header__nav-link--programs link" type="submit"><span>Программы</span></button>
               <ul class="header__nav-list-secondary header__nav-list-secondary--programs">
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link link" href="#">Стажировки</a>
+                  <a class="header__nav-link link" href="#programs">Стажировки</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link link" href="#">Волонтёрство</a>
+                  <a class="header__nav-link link" href="#programs">Волонтёрство</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link link" href="#">Учёба</a>
+                  <a class="header__nav-link link" href="#programs">Учёба</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link link" href="#">Религия</a>
+                  <a class="header__nav-link link" href="#programs">Религия</a>
                 </li>
               </ul>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link link" href="#">Как поехать</a>
+              <a class="header__nav-link link" href="#grant">Как поехать</a>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link link" href="#">Отзывы</a>
+              <a class="header__nav-link link" href="#reviews">Отзывы</a>
             </li>
             <li class="header__nav-item">
               <button class="header__nav-link header__nav-link--secondary header__nav-link--news link" type="submit"><span>Новости</span></button>
               <ul class="header__nav-list-secondary header__nav-list-secondary--news">
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link link" href="#">Интервью</a>
+                  <a class="header__nav-link link" href="#news">Интервью</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link link" href="#">Путешествия</a>
+                  <a class="header__nav-link link" href="#news">Путешествия</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link link" href="#">Программы</a>
+                  <a class="header__nav-link link" href="#news">Программы</a>
                 </li>
                 <li class="header__nav-item-secondary">
-                  <a class="header__nav-link link" href="#">Карьера</a>
+                  <a class="header__nav-link link" href="#news">Карьера</a>
                 </li>
               </ul>
             </li>
             <li class="header__nav-item">
-              <a class="header__nav-link link" href="#">Контакты</a>
+              <a class="header__nav-link link" href="#contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -84,7 +84,7 @@
 
   <main>
     <section class="hero" data-test="hero">
-      <h1 class="visually-hidden">Первый блок</h1>
+      <h1 class="visually-hidden">Промо</h1>
       <div class="hero__slider swiper">
         <div class="swiper-wrapper">
           <div class="hero__item swiper-slide">
@@ -158,45 +158,45 @@
       </div>
     </section>
 
-    <section class="about" data-test="about">
+    <section class="about" data-test="about" id="about">
       <div class="about__wrapper">
         <div class="about__wrapper-top">
-          <h1 class="about__title">О проекте «Стажировка»</h1>
+          <h2 class="about__title">О проекте «Стажировка»</h2>
           <p>«Стажировка» — совместный проект
             правительств и волонтёрских бригад.</p>
         </div>
         <div class="about__wrapper-bottom">
-          <h2>Наша цель</h2>
+          <h3>Наша цель</h3>
           <span>Наша деятельность направлена на повышение квалификации
             молодых специалистов на ранних и средних стадиях карьеры,
             предоставляя им инструменты для решения сложных проблем,
             с которыми сталкиваются в мире. Цель центра — наделить этих
             людей способностью инициировать значимые изменения.</span>
-          <a class="about__link button" href="#">
-            <div>Подробнее о проекте</div>
-          </a>
+          <button class="about__link button" type="button">
+            <span>Подробнее о проекте</span>
+          </button>
         </div>
       </div>
 
       <ul class="about__list">
         <li>
-          <h2>Более 250 программ</h2>
+          <h4>Более 250 программ</h4>
           <p>учебных и рабочих, разной
             длительностью от 3 месяцев
             до 1 года</p>
         </li>
         <li>
-          <h2>Более 3000 участников</h2>
+          <h4>Более 3000 участников</h4>
           <p>уже успешно прошли программу от «Стажировка» и остались в разных странах</p>
         </li>
         <li>
-          <h2>участники из 60 стран</h2>
+          <h4>участники из 60 стран</h4>
           <p>студенты со всего мира приезжают на программу
             «Стажировки» от 3 месяцев до 1 года</p>
         </li>
         <li>
-          <h2>от 4 200 $<br>
-            до 8 400 $</h2>
+          <h4>от 4 200 $<br>
+            до 8 400 $</h4>
           <p>грант всем участникам
             для комфортного прохождения
             программы</p>
@@ -204,9 +204,9 @@
       </ul>
     </section>
 
-    <section class="programs" data-test="programs">
+    <section class="programs" data-test="programs" id="programs">
       <div class="programs__swiper swiper">
-        <h1 class="programs__title">Программы</h1>
+        <h2 class="programs__title">Программы</h2>
         <a class="programs__link button" href="#"><span>Все программы</span></a>
         <!-- Additional required wrapper -->
         <div class="programs__swiper-wrapper swiper-wrapper">
@@ -263,10 +263,10 @@
       </div>
     </section>
 
-    <section class="grant" data-test="grant">
+    <section class="grant" data-test="grant" id="grant">
       <div class="grant__container">
         <div class="grant__wrapper-top">
-          <h1 class="grant__title">Как поехать</h1>
+          <h2 class="grant__title">Как поехать</h2>
           <p>Свяжитесь с координатором, чтобы узнать
             полную информацию. Вы получите
             актуальные сведения о доступных
@@ -301,9 +301,9 @@
       </div>
     </section>
 
-    <section class="news" data-test="news">
-      <h1 class="news__title">Новости и материалы</h1>
-      <form class="news__form" action="#">
+    <section class="news" data-test="news" id="news">
+      <h2 class="news__title">Новости и материалы</h2>
+      <div class="news__block">
         <div class="news__tab-wrapper">
           <ul class="news__tab-list">
             <li class="news__tab-item">
@@ -384,16 +384,16 @@
           <button class="news__pagination-button news__pagination-button--next" type="button"><span class="visually-hidden">Вперед</span>
           </button>
         </div>
-      </form>
+      </div>
     </section>
 
-    <section class="faq" data-test="FAQ">
-      <h1 class="faq__title">Вопросы и ответы</h1>
+    <section class="faq" data-test="FAQ" id="faq">
+      <h2 class="faq__title">Вопросы и ответы</h2>
       <ul class="faq__list">
         <li class="faq__item">
           <div class="faq__item-wrapper">
-            <h2 class="faq__item-title">Кто организатор? Какие
-              сроки у программы?</h2>
+            <h3 class="faq__item-title">Кто организатор? Какие
+              сроки у программы?</h3>
             <button class="faq__button" type="button">
               <span class="visually-hidden">Открыть</span>
             </button>
@@ -402,8 +402,8 @@
         </li>
         <li class="faq__item">
           <div class="faq__item-wrapper">
-            <h2 class="faq__item-title">Что такое грант
-              на обучение?</h2>
+            <h3 class="faq__item-title">Что такое грант
+              на обучение?</h3>
             <button class="faq__button" type="button">
               <span class="visually-hidden">Открыть</span>
             </button>
@@ -412,8 +412,8 @@
         </li>
         <li class="faq__item faq__item--active">
           <div class="faq__item-wrapper">
-            <h2 class="faq__item-title">Как определяется
-              стоимость программы?</h2>
+            <h3 class="faq__item-title">Как определяется
+              стоимость программы?</h3>
             <button class="faq__button" type="button">
               <span class="visually-hidden">Открыть</span>
             </button>
@@ -429,9 +429,9 @@
         </li>
         <li class="faq__item">
           <div class="faq__item-wrapper">
-            <h2 class="faq__item-title faq__item-title--04">Признаётся ли учёба
+            <h3 class="faq__item-title faq__item-title--04">Признаётся ли учёба
               в рамках проекта <br>для
-              дальнейшего обучения?</h2>
+              дальнейшего обучения?</h3>
             <button class="faq__button" type="button">
               <span class="visually-hidden">Открыть</span>
             </button>
@@ -440,10 +440,10 @@
         </li>
         <li class="faq__item">
           <div class="faq__item-wrapper">
-            <h2 class="faq__item-title">Как выглядит полный
+            <h3 class="faq__item-title">Как выглядит полный
               процесс регистрации
               на программу
-              «Стажировка»?</h2>
+              «Стажировка»?</h3>
             <button class="faq__button" type="button">
               <span class="visually-hidden">Открыть</span>
             </button>
@@ -453,9 +453,9 @@
       </ul>
     </section>
 
-    <section class="reviews" data-test="reviews">
+    <section class="reviews" data-test="reviews" id="reviews">
       <div class="reviews__swiper swiper">
-        <h1 class="reviews__title">Отзывы</h1>
+        <h2 class="reviews__title">Отзывы</h2>
         <!-- Additional required wrapper -->
         <div class="reviews__swiper-wrapper swiper-wrapper">
           <!-- Slides -->
@@ -590,50 +590,6 @@
             </div>
           </div>
 
-          <div class="reviews__swiper-slider swiper-slide">
-            <div class="reviews__slider reviews__slider--04">
-              <div class="reviews__slider-container review">
-                <div class="review__wrapper-top">
-                  <div class="review__wrapper">
-                    <div class="review__avatar-wrapper">
-                      <picture>
-                        <source media="(min-width: 768px)" type="image/webp" width="90" height="90" srcset="img/reviews/reviews-tablet-02.webp">
-                        <source type="image/webp" width="60" height="60" srcset="img/reviews/reviews-tablet-02.webp">
-                        <source media="(min-width: 768px)" type="image/jpg" width="90" height="90" srcset="img/reviews/reviews-tablet-02.jpg">
-                        <img class="review__avatar" src="img/reviews/reviews-tablet-02.jpg" width="60" height="60" alt="Аватар">
-                      </picture>
-                    </div>
-                    <h2 class="review__name">Лола Алекс</h2>
-                  </div>
-                  <div class="review__inner">
-                    <p class="review__program">
-                      <span class="review__program-title">Программа</span>
-                      <span class="review__program-description">Masa Art Challenge</span>
-                    </p>
-                    <p class="review__program">
-                      <span class="review__program-title review__program-title--data">Дата</span>
-                      <span class="review__program-description review__program-description--data">Осень 2022</span>
-                    </p>
-                  </div>
-                </div>
-                <div class="review__wrapper-bottom">
-                  <p>Я могу с уверенностью сказать,
-                    что это был один из самых
-                    незабываемых опытов в жизни!</p>
-                  <span>Я рекомендую программу
-                    «Стажировка» всем студентам,
-                    желающим получить незабываемые
-                    впечатления. Сочетание
-                    путешествий, общения и значимой
-                    работы действительно отличает
-                    её от других программ, и я чувствую
-                    огромную благодарность
-                    за предоставленную
-                    мне возможность.</span>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <!-- If we need navigation buttons -->
         <div class="reviews__swiper-button-wrapper">
@@ -650,10 +606,10 @@
       </div>
     </section>
 
-    <section class="contacts" data-test="contacts">
+    <section class="contacts" data-test="contacts" id="contacts">
       <div class="contacts__wrapper">
         <div class="contacts__wrapper-top">
-          <h1 class="contacts__title">Контакты</h1>
+          <h2 class="contacts__title">Контакты</h2>
           <div class="contacts__inner">
             <div class="contacts__description">
               <span>Центральный офис</span>
@@ -683,94 +639,147 @@
       </div>
     </section>
 
-    <section class="form" data-test="form">
+    <section class="form" data-test="form" id="form">
       <div class="form__wrapper">
         <div class="form__inner">
-          <h1 class="form__title">Напишите нам</h1>
+          <h2 class="form__title">Напишите нам</h2>
           <p class="form__description">Оставьте ваши контакты, если у вас
             остались <br>вопросы — мы на них ответим!</p>
-          <form class="form__form" action="#">
+          <form class="form__form" action="https://echo.htmlacademy.ru" method="POST">
             <div class="form__input-wrapper">
               <label class="form__label" for="input-name">Имя</label>
               <div class="form__input-container">
-                <input class="form__input form__input--name" type="text" id="input-name" name="input-name">
+                <input class="form__input form__input--name" type="text" id="input-name" name="input-name" >
               </div>
             </div>
             <div class="form__input-wrapper">
               <label class="form__label" for="input-phone">Телефон</label>
               <div class="form__input-container">
-                <input class="form__input form__input--phone" type="text" id="input-phone" name="input-phone">
+                <input class="form__input form__input--phone" type="tel" id="input-phone" name="input-phone" >
               </div>
             </div>
             <div class="form__input-wrapper">
               <label class="form__label" for="input-message">Ваше сообщение</label>
               <div class="form__input-container">
-                <textarea class="form__input form__input--message" type="text" id="input-message" name="input-message"></textarea>
+                <textarea class="form__input form__input--message" id="input-message" name="input-message"></textarea>
               </div>
             </div>
             <div class="form__input-wrapper">
               <label class="form__label" for="input-city">Выберите город</label>
               <div class="form__input-container">
-                <select class="form__input form__input--city" name="input-city" id="input-city">
+                <select class="form__input form__input--city" name="input-city" id="input-city" >
                   <option value="" selected disabled hidden></option>
                   <option value="city-moskow">Москва</option>
-                  <option value="city-spb">Санкт-Питербург</option>
+                  <option value="city-spb">Санкт-Петербург</option>
                   <option value="city-zhel">Железногорск</option>
                 </select>
               </div>
             </div>
             <div class="form__input-wrapper">
               <div class="form__checkbox-container">
-                <label class="form__label form__label--checkbox" for="input-chekbox">
-                  <input class="form__checkbox" type="checkbox" id="input-chekbox" name="input-chekbox">
-                  <div class="form__checkbox-checkbox"></div>
+                <label class="form__label form__label--checkbox">
+                  <input class="form__checkbox" type="checkbox" id="input-chekbox" name="input-chekbox" required>
+                  <span class="form__checkbox-checkbox"></span>
                   <span>Я согласен на обработку моих персональных <br>данных</span>
                 </label>
               </div>
             </div>
+            <button class="button button--alt form__button" type="submit"><span>Отправить</span></button>
           </form>
-          <button class="button button--alt form__button" type="button"><span>Отправить</span></button>
+
         </div>
       </div>
     </section>
+
+    <div class="popup">
+      <div class="popup__overlay"></div>
+      <div class="popup__container">
+        <button class="popup__button-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <h2 class="popup__title">Напишите нам</h2>
+        <p class="popup__description">
+          Оставьте ваши контакты, если у вас остались <br>вопросы — мы на них ответим!
+        </p>
+        <form class="popup__form" action="https://echo.htmlacademy.ru" method="POST">
+          <div class="popup__input-wrapper">
+            <label class="popup__label" for="popup-input-name">Имя</label>
+            <div class="popup__input-container">
+              <input class="popup__input popup__input--name" type="text" id="popup-input-name" name="popup-input-name">
+            </div>
+          </div>
+          <div class="popup__input-wrapper">
+            <label class="popup__label" for="popup-input-phone">Телефон</label>
+            <div class="popup__input-container">
+              <input class="popup__input popup__input--phone" type="tel" id="popup-input-phone" name="popup-input-phone">
+            </div>
+          </div>
+          <div class="popup__input-wrapper">
+            <label class="popup__label" for="popup-input-city">Выберите город</label>
+            <div class="popup__input-container">
+              <select class="popup__input popup__input--city" name="popup-input-city" id="popup-input-city">
+                <option value="" selected disabled hidden></option>
+                <option value="city-moskow">Москва</option>
+                <option value="city-spb">Санкт-Петербург</option>
+                <option value="city-zhel">Железногорск</option>
+              </select>
+            </div>
+          </div>
+          <div class="popup__input-wrapper">
+            <div class="popup__checkbox-container">
+              <label class="popup__label popup__label--checkbox">
+                <input class="popup__checkbox" type="checkbox" id="popup-input-chekbox" name="input-chekbox">
+                <span class="popup__checkbox-checkbox"></span>
+                <span>Я согласен на обработку моих персональных <br>данных</span>
+              </label>
+            </div>
+          </div>
+          <button class="button popup__button" type="submit"><span>Отправить</span></button>
+        </form>
+
+      </div>
+    </div>
+
   </main>
   <footer class="footer" data-test="footer">
-    <div class="footer__logo-wrapper">
-      <img class="footer__logo" src="img/logo/logotype.png" alt="Логотип" width="52" height="52">
+    <div class="footer__wrapper">
+      <div class="footer__logo-wrapper">
+        <img class="footer__logo" src="img/logo/logotype.png" alt="Логотип" width="52" height="52">
+      </div>
+      <ul class="footer__nav-list">
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#about">О проекте</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#programs">Программы</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link footer__nav-link--how" href="#grant">Как поехать</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#reviews">Отзывы</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#news">Новости</a>
+        </li>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+      <a class="footer__privacy-link" href="#">Политика конфиденциальности</a>
+      <p class="footer__privacy-text">Стажировка © 2023 Все права защищены</p>
+      <ul class="footer__social-list">
+        <li class="footer__social-item">
+          <a class="footer__social-link footer__social-link--vk" href="#" target="_blank" rel="noreferrer noopener"><span class="visually-hidden">Вконтакте</span></a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link footer__social-link--ok" href="#" target="_blank" rel="noreferrer noopener"><span class="visually-hidden">Одноклассники</span></a>
+        </li>
+        <li class="footer__social-item">
+          <a class="footer__social-link footer__social-link--rd" href="#" target="_blank" rel="noreferrer noopener"><span class="visually-hidden">Reddit</span></a>
+        </li>
+      </ul>
     </div>
-    <ul class="footer__nav-list">
-      <li class="footer__nav-item">
-        <a class="footer__nav-link" href="#">О проекте</a>
-      </li>
-      <li class="footer__nav-item">
-        <a class="footer__nav-link" href="#">Программы</a>
-      </li>
-      <li class="footer__nav-item">
-        <a class="footer__nav-link footer__nav-link--how" href="#">Как поехать</a>
-      </li>
-      <li class="footer__nav-item">
-        <a class="footer__nav-link" href="#">Отзывы</a>
-      </li>
-      <li class="footer__nav-item">
-        <a class="footer__nav-link" href="#">Новости</a>
-      </li>
-      <li class="footer__nav-item">
-        <a class="footer__nav-link" href="#">Контакты</a>
-      </li>
-    </ul>
-    <a class="footer__privacy-link" href="#">Политика конфиденциальности</a>
-    <p class="footer__privacy-text">Стажировка © 2023 Все права защищены</p>
-    <ul class="footer__social-list">
-      <li class="footer__social-item">
-        <a class="footer__social-link footer__social-link--vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
-      </li>
-      <li class="footer__social-item">
-        <a class="footer__social-link footer__social-link--ok" href="#"><span class="visually-hidden">Одноклассники</span></a>
-      </li>
-      <li class="footer__social-item">
-        <a class="footer__social-link footer__social-link--rd" href="#"><span class="visually-hidden">Reddit</span></a>
-      </li>
-    </ul>
   </footer>
   <!-- пример использования спрайта
     <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
